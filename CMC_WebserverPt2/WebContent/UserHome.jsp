@@ -10,6 +10,5 @@
 <a href=ManageSavedSchools.jsp> Manage My Saved Schools </a> <br>
 <a href=SearchSchools.jsp> Search for Schools </a> <br>
 <a href=ManageProfile.jsp> Manage My Profile </a> <br>
-u
 </body>
 </html>
