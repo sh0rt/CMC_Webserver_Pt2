@@ -16,7 +16,7 @@
 					for (int i = 0; i < session.getAttribute("user").getSchools().size(); i++) {
 				%>
 				<td>
-					<button type="button" id="buttonRemove">Remove</button>
+					<button type="button" name="buttonRemove">Remove</button>
 				</td>
 				<td>
 					<%
@@ -24,7 +24,7 @@
 					%>
 				</td>
 				<td>
-					<button type="button" id="buttonView">View</button>
+					<button type="button" name="buttonView">View</button>
 				</td>
 			</tr>
 			<%
