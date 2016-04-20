@@ -12,20 +12,14 @@
 		<tbody>
 			<tr>
 				<th>School</th>
-				<%
-					for (int i = 0; i < session.getAttribute("user").getSchools().size(); i++) {
+			</tr>
+			<%
+					for (int i = 0; i < 3; i++) {
 				%>
-				<td>
-					<button type="button" name="buttonRemove">Remove</button>
-				</td>
-				<td>
-					<%
-						session.getAttribute("user").getSchools().get(i).getName();
-					%>
-				</td>
-				<td>
-					<button type="button" name="buttonView">View</button>
-				</td>
+			<tr>
+				<td><input type="submit" value="Remove"></td>
+				<td>hi</td>
+				<td><input type="submit" value="View"></td>
 			</tr>
 			<%
 				}
