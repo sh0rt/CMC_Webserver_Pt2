@@ -15,7 +15,7 @@
 <tbody>
 
 <tr><th colspan="17"><center><h1>Users Currently in the CMC System</h1></center></th></tr>
-<tr><th colspan="17"><a href="AddSchool.jsp">Add New User</a></th></tr>
+<tr><th colspan="17"><a href="AddUser.jsp">Add New User</a></th></tr>
 
 <tr>
 <th></th>

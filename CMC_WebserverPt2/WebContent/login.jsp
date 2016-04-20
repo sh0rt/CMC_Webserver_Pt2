@@ -30,7 +30,7 @@ type="Submit">&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 value="Reset" type="reset"><br>
 </div>
 </form>
-<center><p>Admin login Username: user Password: pass</p>
+<center><p> kate sucksAdmin login Username: user Password: pass</p>
 <p>Student login Username: juser Password: user</center>
 </body>
 </html>
