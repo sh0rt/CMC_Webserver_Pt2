@@ -8,7 +8,6 @@
 </head>
 <body>
 <%User user = (User)session.getAttribute("user");%>
-m
 <center>
 <h1>Manage Profile </h1>
 <form method="post" action="ManageProfileAction.jsp">
