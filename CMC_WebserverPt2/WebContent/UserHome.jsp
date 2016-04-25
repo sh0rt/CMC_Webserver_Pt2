@@ -7,6 +7,8 @@
 <title>User Home</title>
 </head>
 <body>
-User Home
+<a href=ManageSavedSchools.jsp> Manage My Saved Schools </a> <br>
+<a href=SearchSchools.jsp> Search for Schools </a> <br>
+<a href=ManageProfile.jsp> Manage My Profile </a> <br> 
 </body>
 </html>
