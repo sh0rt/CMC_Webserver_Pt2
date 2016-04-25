@@ -5,6 +5,7 @@ http-equiv="content-type">
 <title>Add New School</title>
 </head>
 <body style="width: 952px;">
+<form action="AddNewSchoolAction.jsp" method="post">
 <table style="text-align: left; width: 875px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -132,6 +133,8 @@ name="emphasis4"><input name="emphasis5"><br>
 </tr>
 </tbody>
 </table>
-<br>
+<input name="addschool" value="ADD SCHOOL" type="submit"> &nbsp;<input
+name="cancelchanges" value="CANCEL CHANGES" type="reset"> <br>
+</form> 
 </body>
 </html>
