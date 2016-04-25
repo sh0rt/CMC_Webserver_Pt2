@@ -10,6 +10,7 @@
 <title>Manage Users</title>
 </head>
 <body>
+<a href="adminhome.jsp">Go back to home</a>
 <center>
 <table border ="3">
 <tbody>
