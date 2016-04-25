@@ -14,7 +14,7 @@
 				<th>School</th>
 			</tr>
 			<%
-				User user = (User) session.getAttribute("user");
+				User user = (User)session.getAttribute("user");
 				ArrayList<School> stuSavedSchools = new ArrayList<School>();
 				String error="User has no saved schools";
 				try {
