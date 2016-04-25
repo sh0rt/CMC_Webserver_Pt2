@@ -2,7 +2,7 @@
 <head>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title>addNewSchool</title>
+<title>Add New School</title>
 </head>
 <body style="width: 952px;">
 <table style="text-align: left; width: 875px;" border="1"
