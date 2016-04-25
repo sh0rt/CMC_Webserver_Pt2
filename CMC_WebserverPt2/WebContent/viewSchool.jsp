@@ -3,6 +3,16 @@
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
 <title>ViewSchoolPage</title>
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
 </head>
 <body>
 <span style="font-weight: bold;">VIEW SCHOOL</span><br>
@@ -135,8 +145,6 @@ name="emphases1"><br>
 <br>
 <span style="font-weight: bold;">MAY WE ALSO RECOMMEND....</span><br>
 <br>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-<title>ViewSchoolPage</title>
 <table style="text-align: left; height: 480px; width: 553px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -260,10 +268,8 @@ name="emphases1"><br>
 </tr>
 </tbody>
 </table>
+<input name="saveschool1" value="save" type="submit"><br>
 <br>
-<br>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-<title>ViewSchoolPage</title>
 <table style="text-align: left; height: 480px; width: 553px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -387,9 +393,8 @@ name="emphases1"><br>
 </tr>
 </tbody>
 </table>
+<input name="saveschool2" value="save" type="submit"><br>
 <br>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-<title>ViewSchoolPage</title>
 <table style="text-align: left; height: 480px; width: 553px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -513,9 +518,8 @@ name="emphases1"><br>
 </tr>
 </tbody>
 </table>
+<input name="saveschool3" value="save" type="submit"><br>
 <br>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-<title>ViewSchoolPage</title>
 <table style="text-align: left; height: 480px; width: 553px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -639,9 +643,8 @@ name="emphases1"><br>
 </tr>
 </tbody>
 </table>
+<input name="saveschool4" value="save" type="submit"><br>
 <br>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-<title>ViewSchoolPage</title>
 <table style="text-align: left; height: 480px; width: 553px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -765,8 +768,7 @@ name="emphases1"><br>
 </tr>
 </tbody>
 </table>
-<br>
+<input name="saveschool5" value="save" type="submit"><br>
 <br>
 </body>
 </html>
-
