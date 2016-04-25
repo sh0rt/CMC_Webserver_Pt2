@@ -135,6 +135,6 @@ name="emphasis4"><input name="emphasis5"><br>
 </table>
 <input name="addschool" value="ADD SCHOOL" type="submit"> &nbsp;<input
 name="cancelchanges" value="CANCEL CHANGES" type="reset"> <br>
-</form>
+</form> 
 </body>
 </html>
