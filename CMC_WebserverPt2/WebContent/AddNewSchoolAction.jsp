@@ -38,5 +38,5 @@
 	ex.printStackTrace(System.out);
 }
 		 %>
-</body> 
+</body>  
 </html>

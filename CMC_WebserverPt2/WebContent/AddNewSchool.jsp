@@ -9,7 +9,7 @@ http-equiv="content-type">
 	if(request.getParameter("Error").equals("1"))
 		out.print("<font color=\"red\">Error: Please enter in proper values</font>");
 	}%>
-	<center>
+	<center> 
 	<h1>Add School</h1>
 <form method="post" action="AddNewSchoolAction.jsp">
 <table style="text-align: left; width: 875px;" border="1"

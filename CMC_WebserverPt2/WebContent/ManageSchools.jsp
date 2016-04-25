@@ -67,6 +67,6 @@ for(int i=0; i< schools.size(); i++){ %>
 <%} }%>
 </tbody>
 </table>
-</center>
+</center> 
 </body>
 </html>
