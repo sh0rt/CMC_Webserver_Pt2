@@ -17,6 +17,7 @@ http-equiv="content-type">
 <body>
 <span style="font-weight: bold;">VIEW SCHOOL</span><br>
 <br>
+<form method="post" action="SearchSchoolsAction.jsp">
 <table style="text-align: left; height: 480px; width: 553px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -770,5 +771,6 @@ name="emphases1"><br>
 </table>
 <input name="saveschool5" value="save" type="submit"><br>
 <br>
+</form> 
 </body>
 </html>
