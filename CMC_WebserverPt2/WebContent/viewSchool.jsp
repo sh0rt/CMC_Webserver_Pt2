@@ -5,7 +5,7 @@ http-equiv="content-type">
 <title>ViewSchoolPage</title>
 </head>
 <body>
-<span style="font-weight: bold;">SCHOOL DETAILS</span><br>
+<span style="font-weight: bold;">VIEW SCHOOL</span><br>
 <br>
 <table style="text-align: left; height: 480px; width: 553px;" border="1"
 cellpadding="2" cellspacing="2">
@@ -118,7 +118,7 @@ name="qualOfLife"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top; width: 247px;">EMPHASIS<br>
+<td style="vertical-align: top; width: 247px;">EMPHASES<br>
 </td>
 <td style="vertical-align: top; width: 288px;"><input
 name="emphases1"><br>
@@ -247,7 +247,7 @@ name="qualOfLife"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top; width: 247px;">EMPHASIS<br>
+<td style="vertical-align: top; width: 247px;">EMPHASES<br>
 </td>
 <td style="vertical-align: top; width: 288px;"><input
 name="emphases1"><br>
@@ -373,7 +373,7 @@ name="qualOfLife"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top; width: 247px;">EMPHASIS<br>
+<td style="vertical-align: top; width: 247px;">EMPHASES<br>
 </td>
 <td style="vertical-align: top; width: 288px;"><input
 name="emphases1"><br>
@@ -498,7 +498,7 @@ name="qualOfLife"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top; width: 247px;">EMPHASIS<br>
+<td style="vertical-align: top; width: 247px;">EMPHASES<br>
 </td>
 <td style="vertical-align: top; width: 288px;"><input
 name="emphases1"><br>
@@ -623,7 +623,7 @@ name="qualOfLife"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top; width: 247px;">EMPHASIS<br>
+<td style="vertical-align: top; width: 247px;">EMPHASES<br>
 </td>
 <td style="vertical-align: top; width: 288px;"><input
 name="emphases1"><br>
@@ -748,7 +748,7 @@ name="qualOfLife"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top; width: 247px;">EMPHASIS<br>
+<td style="vertical-align: top; width: 247px;">EMPHASES<br>
 </td>
 <td style="vertical-align: top; width: 288px;"><input
 name="emphases1"><br>
@@ -763,4 +763,3 @@ name="emphases1"><br>
 <br>
 </body>
 </html>
-
