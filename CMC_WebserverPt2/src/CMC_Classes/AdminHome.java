@@ -151,8 +151,8 @@ public class AdminHome {
 	 * @return users
 	 */
 	public User addNewUser(String firstName, String lastName, String username, String password, char type) {
-    	if(type != 'a' && type != 's')
-    		throw new IllegalArgumentException("type is not a or s");
+    	if(type != 'a' && type != 'u')
+    		throw new IllegalArgumentException("type is not a or u");
     	else if(firstName.equals(""))
     		throw new IllegalArgumentException("empty argument 1");
     	else if(lastName.equals(""))
@@ -176,7 +176,7 @@ public class AdminHome {
 	 */
 	public User editUser(String firstName, String lastName, String username, String password, char type, char status) {
     	if(type != 'a' && type != 'u')
-    		throw new IllegalArgumentException("type is not a or s");
+    		throw new IllegalArgumentException("type is not a or u");
     	else if(firstName.equals(""))
     		throw new IllegalArgumentException("empty argument 1");
     	else if(lastName.equals(""))

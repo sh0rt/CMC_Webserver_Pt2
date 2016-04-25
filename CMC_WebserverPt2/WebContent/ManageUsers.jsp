@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"
 	import="java.util.*, CMC_Classes.User, CMC_Classes.AdminHome"%>
@@ -22,7 +23,7 @@
 						</center></th>
 				</tr>
 				<tr>
-					<th colspan="17"><a href="AddSchool.jsp">Add New User</a></th>
+					<th colspan="17"><a href="AddUser.jsp">Add New User</a></th>
 				</tr>
 
 				<tr>

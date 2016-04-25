@@ -43,7 +43,7 @@
 </tr>
 </tbody>
 </table>
-<input type="submit" value="Edit User"">
+<input type="submit" value="Edit User">
 <input type="Reset" value="Reset">
 </form>
 </center>
