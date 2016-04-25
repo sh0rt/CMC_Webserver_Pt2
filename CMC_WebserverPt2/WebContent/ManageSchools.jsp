@@ -16,7 +16,7 @@
 <tbody>
 
 <tr><th colspan="17"><center><h1>Schools Currently in the CMC System</h1></center></th></tr>
-<tr><th colspan="17"><a href="AddSchool.jsp">Add New School</a></th></tr>
+<tr><th colspan="17"><a href="AddNewSchool.jsp">Add New School</a></th></tr>
 
 <tr>
 <th>School</th>
