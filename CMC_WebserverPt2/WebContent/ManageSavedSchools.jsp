@@ -14,9 +14,9 @@
 				<th>School</th>
 			</tr>
 			<%
-				User user = (User)session.getAttribute("user");
+				User user = (User) session.getAttribute("user");
 				ArrayList<School> stuSavedSchools = new ArrayList<School>();
-				String error="User has no saved schools";
+				String error = "User has no saved schools";
 				try {
 					stuSavedSchools = user.getSavedSchools();
 				} catch (NullPointerException npe) {
@@ -28,12 +28,12 @@
 				<td><input type="submit" value="Remove"></td>
 				<td>
 					<%
-						try{
-							out.print(stuSavedSchools.get(i));
+						try {
+								out.print(stuSavedSchools.get(i));
+							} catch (IndexOutOfBoundsException iobe) {
+					%><%=error%>
+					<%
 						}
-					catch(IndexOutOfBoundsException iobe) {
-						%><%=error%><%
-					}
 					%>
 				</td>
 				<td><input type="submit" value="View"></td>
