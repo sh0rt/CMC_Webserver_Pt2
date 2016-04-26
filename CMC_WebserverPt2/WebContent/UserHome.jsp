@@ -8,13 +8,12 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
-	<a href="logout.jsp" id="logout">Log Out</a>
-	<br>
 	<div id="UserHomeItems">
 		<h1>Student Menu</h1>
 		<a href=ManageSavedSchools.jsp> Manage My Saved Schools </a> <br>
-		<a href=searchSchoolMenu.jsp> Search for Schools </a> <br>
-		<a href=ManageProfile.jsp> Manage My Profile </a> <br>
+		<a href=searchSchoolMenu.jsp> Search for Schools </a> <br> 
+		<a href=ManageProfile.jsp> Manage My Profile </a> <br> <br> 
+		<a href="logout.jsp" id="logoutUH">Log Out</a>
 	</div>
 </body>
 </html>

@@ -14,40 +14,43 @@
 		User user = (User) session.getAttribute("user");
 	%>
 	<center>
-		<h1>Manage Profile</h1>
-		<form method="post" action="ManageProfileAction.jsp">
-			<table border="3">
-				<tbody>
-					<tr>
-						<td width="160px">First Name</td>
-						<td><input type="text" name="first"
-							value="<%=user.getFirstName()%>"></td>
-					</tr>
-					<tr>
-						<td width="160px">Last Name</td>
-						<td><input type="text" name="last"
-							value="<%=user.getLastName()%>"></td>
-					</tr>
-					<tr>
-						<td width="160px">Username</td>
-						<td><input type="text" name="username"
-							value="<%=user.getUsername()%>" readonly></td>
-					</tr>
-					<tr>
-						<td width="160px">Password</td>
-						<td><input type="text" name="password"
-							value="<%=user.getPassword()%>"></td>
-					</tr>
-					<tr>
-						<td width="160px">Type</td>
-						<td><input type="text" name="type"
-							value="<%=user.getType()%>" readonly></td>
-					</tr>
-				</tbody>
-			</table>
-			<input type="submit" value="Edit User""> <input type="Reset"
-				value="Reset">
-		</form>
+		<div id="ManProItems">
+			<h1>Manage Profile</h1>
+			<form method="post" action="ManageProfileAction.jsp">
+				<table border="3">
+					<tbody>
+						<tr>
+							<td width="160px">First Name</td>
+							<td><input type="text" name="first"
+								value="<%=user.getFirstName()%>"></td>
+						</tr>
+						<tr>
+							<td width="160px">Last Name</td>
+							<td><input type="text" name="last"
+								value="<%=user.getLastName()%>"></td>
+						</tr>
+						<tr>
+							<td width="160px">Username</td>
+							<td><input type="text" name="username"
+								value="<%=user.getUsername()%>" readonly></td>
+						</tr>
+						<tr>
+							<td width="160px">Password</td>
+							<td><input type="text" name="password"
+								value="<%=user.getPassword()%>"></td>
+						</tr>
+						<tr>
+							<td width="160px">Type</td>
+							<td><input type="text" name="type"
+								value="<%=user.getType()%>" readonly></td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<input type="submit" value="Edit User""> <input type="Reset"
+					value="Reset">
+			</form>
+		</div>
 	</center>
 </body>
 </html>

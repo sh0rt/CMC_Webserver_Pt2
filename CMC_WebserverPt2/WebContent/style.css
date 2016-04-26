@@ -31,6 +31,12 @@ a#logout {
 	border-radius: 5px;
 }
 
+a#logoutUH {
+	background-color: #D1D36A;
+	padding: 5px;
+	border-radius: 5px;
+}
+
 a#goback {
 	float: left;
 	background-color: #D1D36A;
@@ -56,6 +62,24 @@ div#ManSavSchItems {
 div#SeaSchMenuItems {
 	background-color: #D1D36A;
 	width: 1000px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#UserHomeItems {
+	background-color: #D1D36A;
+	width: 225px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#ManProItems {
+	background-color: #D1D36A;
+	width: 300px;
 	padding: 25px;
 	margin-left: auto;
 	margin-right: auto;
