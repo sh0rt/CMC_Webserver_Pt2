@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CMC</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body background="image.jpg" >
 
 <%session.setAttribute("adminHome", null);

@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CMC Login</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
 <div align = "right"> 
 <p>Not in our System? <a href="Register.jsp">Register here!</a><p/>

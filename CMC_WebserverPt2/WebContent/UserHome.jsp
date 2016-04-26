@@ -6,7 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>User Home</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+<a href="logout.jsp" id="logout">Log Out</a><br>
+<h1>Student Menu</h1>
 <a href=ManageSavedSchools.jsp> Manage My Saved Schools </a> <br>
 <a href=searchSchoolMenu.jsp> Search for Schools </a> <br>
 <a href=ManageProfile.jsp> Manage My Profile </a> <br> 
