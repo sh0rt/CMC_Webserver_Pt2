@@ -24,6 +24,10 @@ th#school {
 	text-align: center;
 }
 
+td {
+	text-align: center;
+}
+
 a#logout {
 	float: right;
 	background-color: #D1D36A;
@@ -62,10 +66,26 @@ a#gobackMS {
 	border-radius: 5px;
 }
 
+p#registerPrompt {
+	float: right;
+	background-color: #D1D36A;
+	padding: 10px;
+	border-radius: 10px;
+}
+
 input {
 	color: #050;
 	background-color: #fed;
-	border: 2px;
+	border: 1px;
+}
+
+input.actionButton {
+	border-style: solid;
+	border-color: gray;
+}
+
+input.newUser {
+	background-color: white;
 }
 
 div#ManSavSchItems {
@@ -125,6 +145,33 @@ div#ManUseItems {
 div#ManSchItems {
 	background-color: #D1D36A;
 	width: 2000px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#LogItems {
+	background-color: #D1D36A;
+	width: 500px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#regItems {
+	background-color: #D1D36A;
+	width: 400px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#ManProItems {
+	background-color: #D1D36A;
+	width: 400px;
 	padding: 25px;
 	margin-left: auto;
 	margin-right: auto;
