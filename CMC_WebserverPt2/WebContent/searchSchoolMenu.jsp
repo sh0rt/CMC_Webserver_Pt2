@@ -8,7 +8,7 @@ http-equiv="content-type">
 <body>
 	<a href="UserHome.jsp" id="goback">Go back</a>
 	<a href="logout.jsp" id="logout">Log Out</a>
-<font style="font-weight: bold;" size="+1">Search Menu</font><br>
+<h1>Search Menu</h1><br>
 <br>
 <table style="text-align: left; height: 500px; width: 974px;" border="1"
 cellpadding="2" cellspacing="2">

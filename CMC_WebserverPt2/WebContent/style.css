@@ -26,8 +26,29 @@ th#school {
 
 a#logout {
 	float: right;
+	background-color: #D1D36A;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 a#goback {
 	float: left;
+	background-color: #D1D36A;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+input {
+	color: #050;
+	background-color: #fed;
+	border: 2px;
+}
+
+div#ManSavSchItems {
+	background-color: #D1D36A;
+	width: 400px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
 }

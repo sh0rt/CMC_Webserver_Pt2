@@ -11,6 +11,7 @@
 <body>
 	<a href="UserHome.jsp" id="goback">Go back</a>
 	<a href="logout.jsp" id="logout">Log Out</a>
+	<div id="ManSavSchItems">
 	<h1>Manage Saved Schools</h1>
 	<table border="3" id="ManSavSch">
 		<tbody>
@@ -29,7 +30,7 @@
 				for (int i = 0; i < 5; i++) {
 			%>
 			<tr>
-				<td><input type="submit" value="Remove"></td>
+				<td><input type="submit" value="Remove" id="removeButton"></td>
 				<td>
 					<%
 						try {
@@ -39,12 +40,13 @@
  	}
  %>
 				</td>
-				<td><input type="submit" value="View"></td>
+				<td><input type="submit" value="View" id="viewButton"></td>
 			</tr>
 			<%
 				}
 			%>
 		</tbody>
 	</table>
+	</div>
 </body>
 </html>
