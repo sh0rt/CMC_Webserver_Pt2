@@ -1,8 +1,19 @@
 @CHARSET "UTF-8";
 
+/*#grad {
+	white-space: nowrap;
+	background: #55AA55;
+	background: -webkit-linear-gradient(#55AA55, #2D882D);
+	background: -0-linear-gradient(#55AA55, #2D882D);
+	background: -moz-linear-gradient(#55AA55, #2D882D);
+	background: linear-gradient(#55AA55, #2D882D);
+}*/
+
 body {
+	white-space: nowrap;
 	font-family: Helvetica;
-	background-color: #55AA55;
+	background: linear-gradient(#55AA55, #2D882D);
+	background-repeat: no-repeat;
 	text-align: center;
 }
 
@@ -17,4 +28,8 @@ th#school {
 
 a#logout {
 	float: right;
+}
+
+a#goback {
+	float: left;
 }
