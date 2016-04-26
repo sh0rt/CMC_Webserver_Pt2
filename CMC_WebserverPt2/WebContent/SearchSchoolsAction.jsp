@@ -54,9 +54,12 @@ emphasis[1] = request.getParameter("emphases2");
 emphasis[2] = request.getParameter("emphases3");
 emphasis[3] = request.getParameter("emphases4");
 emphasis[4] = request.getParameter("emphases5");
-((StudentHome)session.getAttribute("studenthome")).search(name, state, location, control, numStudents, satVerbal,
+int[] results = ((StudentHome)session.getAttribute("studenthome")).search(name, state, location, control, numStudents, satVerbal,
 		satMath, numApplicants, percentFemale, expenses, percentFinAid, percentAdmitted, percentEnrolled,
 		academicScale, socialScale, qualOfLife, emphasis);
 %>
+<%response.sendRedirect("viewSchool.jsp?school1="+results[0]+ "&school2="+results[1]+
+"&school3="+results[2]+ "&school4="+results[3]+ "&school5="+results[4]+ "&school6="+results[5]+ 
+"&school7="+results[6]+ "&school8="+results[7]+ "&school9="+results[8]+ "&school10="+results[9]); %>
 </body>
 </html>
