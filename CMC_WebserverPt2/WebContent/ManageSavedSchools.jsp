@@ -9,6 +9,8 @@
 </head>
 	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+	<a href="UserHome.jsp" id="goback">Go back</a>
+	<a href="logout.jsp" id="logout">Log Out</a>
 	<h1>Manage Saved Schools</h1>
 	<table border="3" id="ManSavSch">
 		<tbody>

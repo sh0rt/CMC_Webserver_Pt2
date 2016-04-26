@@ -4,7 +4,10 @@
 http-equiv="content-type">
 <title>searchSchool</title>
 </head>
+<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+	<a href="UserHome.jsp" id="goback">Go back</a>
+	<a href="logout.jsp" id="logout">Log Out</a>
 <font style="font-weight: bold;" size="+1">Search Menu</font><br>
 <br>
 <table style="text-align: left; height: 500px; width: 974px;" border="1"

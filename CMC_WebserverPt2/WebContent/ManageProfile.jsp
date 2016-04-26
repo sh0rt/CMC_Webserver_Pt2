@@ -6,7 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Manage Profile</title>
 </head>
+<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+	<a href="UserHome.jsp" id="goback">Go back</a>
+	<a href="logout.jsp" id="logout">Log Out</a>
 	<%
 		User user = (User) session.getAttribute("user");
 	%>
