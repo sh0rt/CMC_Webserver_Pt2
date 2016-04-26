@@ -6,11 +6,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Administrator Menu</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
 <%if(session.getAttribute("user")==null || ((User)session.getAttribute("user")).getType()!='a')
 	response.sendRedirect("login.jsp?Error=5");%>
+	
+	<p>
+
+<a href="logout.jsp" id="logout">Log Out</a><br>
 <a href="ManageSchools.jsp">Manage Universities</a>
-<br>
 <a href="ManageUsers.jsp">Manage Users</a>
+
+</p>
 </body>
 </html>

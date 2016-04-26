@@ -126,7 +126,7 @@ public class StudentHome {
 	 * @param emphasis
 	 * @return schools
 	 */
-	public School[] search(String name, String state, String location, String control, int[] numStudents,
+	public int[] search(String name, String state, String location, String control, int[] numStudents,
 			double[] satVerbal, double[] satMath, int[] numApplicants, double[] percentFemale, double[] expenses,
 			double[] percentFinAid, double[] percentAdmitted, double[] percentEnrolled, int[] academicScale,
 			int[] socialscale, int[] qualOfLife, String[] emphasis) {

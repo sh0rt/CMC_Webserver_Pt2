@@ -137,14 +137,14 @@ public class StudentUI {
 			double[] percentFinAid, double[] percentAdmitted, double[] percentEnrolled, int[] academicScale,
 			int[] socialscale, int[] qualOfLife, String[] emphasis) {
 
-		School[] results = student.search(name, state, location, control, numStudents, satVerbal, satMath,
+		int[] results = student.search(name, state, location, control, numStudents, satVerbal, satMath,
 				numApplicants, percentFemale, expenses, percentFinAid, percentAdmitted, percentEnrolled, academicScale,
 				socialscale, qualOfLife, emphasis);
-		String temp = "Result 1: " + results[0].getName() + "\n" + "Result 2: " + results[1].getName() + "\n"
-				+ "Result 3: " + results[2].getName() + "\n" + "Result 4: " + results[3].getName() + "\n" + "Result 5: "
-				+ results[4].getName() + "\n";
+	//	String temp = "Result 1: " + results[0].getName() + "\n" + "Result 2: " + results[1].getName() + "\n"
+			//	+ "Result 3: " + results[2].getName() + "\n" + "Result 4: " + results[3].getName() + "\n" + "Result 5: "
+			//	+ results[4].getName() + "\n";
 		// School[] recommend = student.getRecommend();
-		return temp;
+		return null;
 	}
 
 	/**

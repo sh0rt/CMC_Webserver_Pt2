@@ -11,6 +11,7 @@
 	if(request.getParameter("Error").equals("1"))
 		out.print("<font color=\"red\">Error: Please enter in proper values</font>");
 	}%>
+	<a href="ManageUsers.jsp">Go back</a>
 	<center>
 <h1>Add User</h1>
 <form method="post" action="AddUserAction.jsp">

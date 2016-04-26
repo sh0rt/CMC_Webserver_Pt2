@@ -7,6 +7,7 @@
 <title>Edit School</title>
 </head>
 <body>
+<a href="ManageSchools.jsp">Go back</a>
 <center>
 <form method="post" action="EditSchoolAction.jsp">
 <%

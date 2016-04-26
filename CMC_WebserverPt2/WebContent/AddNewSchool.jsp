@@ -6,11 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add New School</title>
 </head>
-<body style="width: 952px;">
+<body>
 <%if(request.getParameter("Error") != null){
 	if(request.getParameter("Error").equals("1"))
 		out.print("<font color=\"red\">Error: Please enter in proper values</font>");
 	}%>
+	<a href="ManageSchools.jsp">Go back</a>
 	<center> 
 	<h1>Add School</h1>
 <form method="post" action="AddNewSchoolAction.jsp">
