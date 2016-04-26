@@ -52,3 +52,12 @@ div#ManSavSchItems {
 	margin-right: auto;
 	border-radius: 25px;
 }
+
+div#SeaSchMenuItems {
+	background-color: #D1D36A;
+	width: 1000px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
