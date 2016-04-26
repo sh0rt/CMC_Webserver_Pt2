@@ -15,6 +15,7 @@ http-equiv="content-type">
 http-equiv="content-type">
 </head>
 <body>
+<% %>
 <span style="font-weight: bold;">VIEW SCHOOL</span><br>
 <br>
 <form method="post" action="SearchSchoolsAction.jsp">
