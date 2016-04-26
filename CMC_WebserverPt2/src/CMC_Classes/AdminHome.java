@@ -62,15 +62,16 @@ public class AdminHome {
 			double percentAdmitted, double percentEnrolled, int academicScale, int socialScale, int qualOflife,
 			String[] emphasis) {
 	  	  if(school.equals("") || state.equals("") || location.equals("") || control.equals("") || numStudents<=0 || percentFemale<0 || 
-				  percentFemale > 100 || satVerbal<=0 || satVerbal>800 || satMath<=0 || satMath>800 || expenses <= 0 || percentFinAid<=0 ||
-				  percentFinAid>100 || numApplicants<=0 || percentAdmitted <= 0 || percentAdmitted > 100 || percentEnrolled <= 0 || percentEnrolled > 100 ||
-				  academicScale<1 || academicScale>5 || socialScale>5 || socialScale<1 || qualOflife<1 || qualOflife>5){
+				  percentFemale > 100 || (satVerbal<=0 && satVerbal !=-1) || satVerbal>800 || (satMath<=0 && satMath != -1) || satMath>800 || (expenses <= 0 && expenses != -1) ||
+				  (percentFinAid<=0 && percentFinAid != -1) || percentFinAid>100 || (numApplicants<=0 && numApplicants != -1) || (percentAdmitted <= 0 && percentAdmitted != -1)
+				  || percentAdmitted > 100 || percentEnrolled <= 0 || percentEnrolled > 100 || academicScale<1 || academicScale>5 || socialScale>5 || (socialScale<1 && socialScale != -1)
+				  || qualOflife<1 || qualOflife>5){
 			  if(school.equals("")){System.out.println("error with school: " + school);}
 			  if(state.equals("")){System.out.println("error with state: " + state);}
 			  if(location.equals("")){System.out.println("error with location: " + location);}
-			  if(numStudents<=0){System.out.println("error with control: " + control);}
-			  if(percentFemale<0 || percentFemale > 100){System.out.println("error with numStudents: " + numStudents);}
-			  if(satVerbal<=0 || satVerbal>800){System.out.println("error with percentFemale: " + percentFemale);}
+			  if(numStudents<=0){System.out.println("error with numStudentsl: " + numStudents);}
+			  if(percentFemale<0 || percentFemale > 100){System.out.println("error with percentFemale: " + percentFemale);}
+			  if(satVerbal<=0 || satVerbal>800){System.out.println("error with satVerbal: " + satVerbal);}
 			  if(satMath<=0 || satMath>800){System.out.println("error with satMath: " + satMath);}
 			  if(expenses <= 0 ){System.out.println("error with expenses: " + expenses);}
 			  if(percentFinAid<=0 ||percentFinAid>100){System.out.println("error with percentFinAid: " + percentFinAid);}
