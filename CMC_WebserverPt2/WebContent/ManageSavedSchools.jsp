@@ -5,13 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Manage Schools</title>
+<link rel="stylesheet" href="style.css" type="text/css"></link>
 </head>
 <body>
 	<h1>Manage Saved Schools</h1>
-	<table border="3">
+	<table border="3" id="ManSavSch">
 		<tbody>
 			<tr>
-				<th>School</th>
+				<td colspan="3" id="school">School</td>
 			</tr>
 			<%
 				User user = (User) session.getAttribute("user");
@@ -29,19 +30,17 @@
 				<td>
 					<%
 						try {
-								out.print(stuSavedSchools.get(i));
+								out.print(stuSavedSchools.get(i).getName());
 							} catch (IndexOutOfBoundsException iobe) {
-					%><%=error%>
-					<%
-						}
-					%>
+					%><%=error%> <%
+ 	}
+ %>
 				</td>
 				<td><input type="submit" value="View"></td>
 			</tr>
 			<%
 				}
 			%>
-
 		</tbody>
 	</table>
 </body>
