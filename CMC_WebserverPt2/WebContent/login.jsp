@@ -33,11 +33,12 @@
 			<div style="text-align: center;">
 				Password:&nbsp; <input name="password" type="password"><br>
 			</div>
+			<br>
 			<div style="text-align: center;">
 				<input value="Submit" name="Login" type="Submit" class="actionButton">&nbsp;&nbsp;&nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input name="reset"
-					value="Reset" type="reset" class="actionButton"><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input name="reset" value="Reset" type="reset" class="actionButton"><br>
 			</div>
 		</form>
 		<center>
