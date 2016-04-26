@@ -6,7 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add User Action</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+<a href="logout.jsp" id="logout">Log Out</a>
+<a href="ManageUsers.jsp" id="goback">Go back</a>
 <%try{
 	((AdminInterface)session.getAttribute("adminInterface")).addUser(
 		request.getParameter("first"),

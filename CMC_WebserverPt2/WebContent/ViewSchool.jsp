@@ -6,8 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Edit School</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
-<a href="ManageSchools.jsp">Go back</a>
+<a href="logout.jsp" id="logout">Log Out</a>
+<a href="ManageSchools.jsp" id="goback">Go back</a>
 <center>
 <form method="post" action="EditSchoolAction.jsp">
 <%

@@ -7,6 +7,7 @@
 <title>Manage Schools</title>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
 	<h1>Manage Saved Schools</h1>
 	<table border="3" id="ManSavSch">

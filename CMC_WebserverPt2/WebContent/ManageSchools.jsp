@@ -9,8 +9,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Manage Schools</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
-<a href="adminhome.jsp">Go back</a>
+<a href="logout.jsp" id="logout">Log Out</a>
+<a href="adminhome.jsp" id="goback">Go back</a>
 <center>
 <table border ="3">
 <tbody>

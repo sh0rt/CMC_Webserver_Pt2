@@ -6,13 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Edit User</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+<a href="logout.jsp" id="logout">Log Out</a>
+<a href="ManageUsers.jsp" id="goback">Go back</a>
 <%if(request.getParameter("Error") != null){
 	if(request.getParameter("Error") == "1")
 		out.print("<p color='red'>Please enter in proper values</p>");
 	}%>
 <%User user = ((AdminHome)session.getAttribute("adminhome")).getUser(Integer.parseInt(request.getParameter("euser"))); %>
-<a href="ManageUsers.jsp">Go back</a>
+<a href="adminhome.jsp" id="goback">Go back</a>
 <center>
 <h1>Edit User</h1>
 <form method="post" action="EditUserAction.jsp">
