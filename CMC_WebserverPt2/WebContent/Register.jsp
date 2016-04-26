@@ -6,9 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Register</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+<a href="login.jsp" id="goback">Go back</a><br>
 <center>
-<h1>New User</h1>
+<h1>New User Registration</h1>
 <form method="post"action="RegisterAction.jsp">
 <table>
 <tr>
