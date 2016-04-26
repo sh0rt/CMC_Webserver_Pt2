@@ -11,7 +11,7 @@ import java.util.*;
 public class StudentHome {
 	//USE THE DATABASE SO WHEN STUDENT ADDS STUFF IT ALSO GOES TO DATABASE EVERY TIME!!!!!
 	private User user;
-	//private DataBaseHome database;
+	private DataBaseHome database;
 	private SearchHome search;
 
 	/**
@@ -23,7 +23,7 @@ public class StudentHome {
 	public StudentHome(User user) {
 		super();
 		this.user = user;
-		//		this.database = database;
+		this.database = new DataBaseHome();
 		search = new SearchHome();
 	}
 
@@ -162,5 +162,9 @@ public class StudentHome {
 	 */
 	public int getSearchID(int id) {
 		return search.getID(id - 1);
+	}
+	
+	public School getSchoolByID(int id){
+		return database.getSchool(id);
 	}
 }
