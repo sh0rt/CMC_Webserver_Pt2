@@ -251,7 +251,7 @@ public class AdminHome {
 	public User getUser(int ID) {
 		if(this.users.size() == ID || ID < 0)
 			throw new IllegalArgumentException();
-		return this.users.get(ID);
+		return this.database.getUsers().get(ID);
 	}
 
 }

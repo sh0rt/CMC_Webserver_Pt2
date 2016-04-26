@@ -35,7 +35,7 @@
 			</div>
 			<br>
 			<div style="text-align: center;">
-				<input value="Submit" name="Login" type="Submit" class="actionButton">&nbsp;&nbsp;&nbsp;
+				<input value="Login" name="Login" type="Submit" class="actionButton">&nbsp;&nbsp;&nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<input name="reset" value="Reset" type="reset" class="actionButton"><br>

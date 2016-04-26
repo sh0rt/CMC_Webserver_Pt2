@@ -7,7 +7,8 @@
 <title>CMC</title>
 </head>
 	<link rel="stylesheet" href="style.css" type="text/css"></link>
-<body background="image.jpg" >
+
+<body >
 
 <%session.setAttribute("adminHome", null);
   session.setAttribute("adminInterface", null);
@@ -20,7 +21,8 @@
 <form action="login.jsp">
 <input type="submit" value ="Continue to Website">
 </form>
-
 </center>
+
+
 </body>
 </html>
