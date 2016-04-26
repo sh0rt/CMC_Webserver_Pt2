@@ -540,4 +540,25 @@ public class School {
 		temp[this.emphasis.length-1] = emphasis;
 		this.emphasis = temp;
 	}
+	
+	public String[] getEmphasisfive(){
+		String[] emp = new String[5];
+		if(this.emphasis.length == 5)
+			return this.emphasis;
+		else if(this.emphasis.length <5){
+			for(int i=0; i< this.emphasis.length; i++){
+			emp[i] = this.emphasis[i];
+			}
+			for(int i=emphasis.length;i<5;i++){
+				emp[i] = "";
+			}
+			return emp;
+		}else{
+			for(int i=0; i<5; i++){
+			emp[i] = this.emphasis[i];
+			}
+			return emp;
+		}
+		
+	}
 }

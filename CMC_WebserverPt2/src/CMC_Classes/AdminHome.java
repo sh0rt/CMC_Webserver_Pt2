@@ -64,8 +64,25 @@ public class AdminHome {
 	  	  if(school.equals("") || state.equals("") || location.equals("") || control.equals("") || numStudents<=0 || percentFemale<0 || 
 				  percentFemale > 100 || satVerbal<=0 || satVerbal>800 || satMath<=0 || satMath>800 || expenses <= 0 || percentFinAid<=0 ||
 				  percentFinAid>100 || numApplicants<=0 || percentAdmitted <= 0 || percentAdmitted > 100 || percentEnrolled <= 0 || percentEnrolled > 100 ||
-				  academicScale<1 || academicScale>5 || socialScale>5 || socialScale<1 || qualOflife<1 || qualOflife>5)
-			  throw new IllegalArgumentException();
+				  academicScale<1 || academicScale>5 || socialScale>5 || socialScale<1 || qualOflife<1 || qualOflife>5){
+			  if(school.equals("")){System.out.println("error with school: " + school);}
+			  if(state.equals("")){System.out.println("error with state: " + state);}
+			  if(location.equals("")){System.out.println("error with location: " + location);}
+			  if(numStudents<=0){System.out.println("error with control: " + control);}
+			  if(percentFemale<0 || percentFemale > 100){System.out.println("error with numStudents: " + numStudents);}
+			  if(satVerbal<=0 || satVerbal>800){System.out.println("error with percentFemale: " + percentFemale);}
+			  if(satMath<=0 || satMath>800){System.out.println("error with satMath: " + satMath);}
+			  if(expenses <= 0 ){System.out.println("error with expenses: " + expenses);}
+			  if(percentFinAid<=0 ||percentFinAid>100){System.out.println("error with percentFinAid: " + percentFinAid);}
+			  if(numApplicants<=0){System.out.println("error with num Applicants: " + numApplicants);}
+			  if(percentAdmitted <= 0 || percentAdmitted > 100){System.out.println("error with percentAdmitted: " + percentAdmitted);}
+			  if(percentEnrolled <= 0 || percentEnrolled > 100){System.out.println("error with percentEnrolled: " + percentEnrolled);}
+			  if(academicScale<1 || academicScale>5){System.out.println("error with academic scale: " + academicScale);}
+			  if(socialScale>5 || socialScale<1){System.out.println("error with socialScale: " + socialScale);}
+			  if(qualOflife<1 || qualOflife>5){System.out.println("error with qualOfLife: " + qualOflife);}
+			  throw new IllegalArgumentException("something doesnt look right");
+
+	  	  }
 		int i = 0;
 		while (i < schools.size() && !schools.get(i).getSchool().equals(school)) {
 			i++;
