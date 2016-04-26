@@ -165,6 +165,7 @@ public class StudentHome {
 	}
 	
 	public School getSchoolByID(int id){
+		id +=1;
 		return database.getSchool(id);
 	}
 }

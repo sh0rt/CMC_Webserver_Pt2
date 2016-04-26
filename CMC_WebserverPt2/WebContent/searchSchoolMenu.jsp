@@ -9,6 +9,7 @@ http-equiv="content-type">
 	<a href="UserHome.jsp" id="goback">Go back</a>
 	<a href="logout.jsp" id="logout">Log Out</a>
 <font style="font-weight: bold;" size="+1">Search Menu</font><br>
+<form action="SearchSchoolsAction.jsp" method="post">
 <br>
 <table style="text-align: left; height: 500px; width: 974px;" border="1"
 cellpadding="2" cellspacing="2">
@@ -146,5 +147,6 @@ name="qualOfLife"> and&nbsp;<input name="qualOfLife1"><br>
 <br>
 <input name="Search For Schools" type="submit"> <input
 name="Reset Form" type="reset"><br>
+</form>
 </body>
 </html>

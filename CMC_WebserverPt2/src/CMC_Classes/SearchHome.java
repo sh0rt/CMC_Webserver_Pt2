@@ -59,7 +59,7 @@ public class SearchHome {
 			double[] satVerbal, double[] satMath, int[] numApplicants, double[] percentFemale, double[] expenses,
 			double[] percentFinAid, double[] percentAdmitted, double[] percentEnrolled, int[] academicScale,
 			int[] socialscale, int[] qualOfLife, String[] emphasis) {
-
+/*
 		try{
 		if(name.equals(""))
 			throw new IllegalArgumentException();
@@ -124,7 +124,7 @@ public class SearchHome {
 		if( socialscale[0] < 1 || socialscale[1] > 5 || socialscale[0] > socialscale[1])
 			throw new IllegalArgumentException();
 		}catch(NullPointerException ex){}
-		
+		*/
 		School[] top = new School[5];
 		ArrayList<School> schools = database.getSchools();
 		int[][] tally = new int[schools.size()][17];
