@@ -12,7 +12,7 @@
 		<h1>Student Menu</h1>
 		<a href=ManageSavedSchools.jsp> Manage My Saved Schools </a> <br>
 		<a href=searchSchoolMenu.jsp> Search for Schools </a> <br> 
-		<a href=ManageProfile.jsp> Manage My Profile </a> <br> <br> 
+		<a href=ManageProfile.jsp> Manage My Profile </a> <br> <hr>
 		<a href="logout.jsp" id="logoutUH">Log Out</a>
 	</div>
 </body>
