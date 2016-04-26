@@ -43,42 +43,42 @@ name="control">&nbsp;(PRIVATE, STATE, CITY OR -1 FOR UNKNOWN)<br>
 STUDENTS<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="numberOfStudents"> and <input name="numberOfStudents"><br>
+name="numberOfStudents"> and <input name="numberOfStudents1"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top; width: 276px;">by % FEMALE<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="female"> and <input name="female"><br>
+name="female"> and <input name="female1"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top; width: 276px;">by SAT VERBAL<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="satVerbal"> and&nbsp;<input name="satVerbal"><br>
+name="satVerbal"> and&nbsp;<input name="satVerbal1"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top; width: 276px;">by SAT MATH<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="satMath"> and&nbsp;<input name="satMath"><br>
+name="satMath"> and&nbsp;<input name="satMath1"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top; width: 276px;">by EXPENSES<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="expenses"> and&nbsp;<input name="expenses"><br>
+name="expenses"> and&nbsp;<input name="expenses1"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top; width: 276px;">by % FINANCIAL AID<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="financialAid"> and&nbsp;<input name="financialAid"><br>
+name="financialAid"> and&nbsp;<input name="financialAid1"><br>
 </td>
 </tr>
 <tr>
@@ -86,21 +86,21 @@ name="financialAid"> and&nbsp;<input name="financialAid"><br>
 APPLICANTS<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="numOfApplicants"> and&nbsp;<input name="numOfApplicants"><br>
+name="numOfApplicants"> and&nbsp;<input name="numOfApplicants1"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top; width: 276px;">by % ADMITTED<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="admitted"> and&nbsp;<input name="admitted"><br>
+name="admitted"> and&nbsp;<input name="admitted1"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top; width: 276px;">by % ENROLLED<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="enrolled"> and&nbsp;<input name="enrolled"><br>
+name="enrolled"> and&nbsp;<input name="enrolled1"><br>
 </td>
 </tr>
 <tr>
@@ -108,7 +108,7 @@ name="enrolled"> and&nbsp;<input name="enrolled"><br>
 (1-5)<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="academicScale"> and&nbsp;<input name="academicScale"><br>
+name="academicScale"> and&nbsp;<input name="academicScale1"><br>
 </td>
 </tr>
 <tr>
@@ -116,7 +116,7 @@ name="academicScale"> and&nbsp;<input name="academicScale"><br>
 (1-5)<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="socialScale"> and&nbsp;<input name="socialScale"><br>
+name="socialScale"> and&nbsp;<input name="socialScale1"><br>
 </td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@ name="socialScale"> and&nbsp;<input name="socialScale"><br>
 SCALE (1-5)<br>
 </td>
 <td style="vertical-align: top; width: 680px;">between&nbsp;<input
-name="qualOfLife"> and&nbsp;<input name="qualOfLife"><br>
+name="qualOfLife"> and&nbsp;<input name="qualOfLife1"><br>
 </td>
 </tr>
 <tr>
@@ -135,6 +135,7 @@ name="qualOfLife"> and&nbsp;<input name="qualOfLife"><br>
 <input name="emphases2"><br>
 <input name="emphases3"><br>
 <input name="emphases4"><br>
+<input name="emphases5"><br>
 </td>
 </tr>
 </tbody>
