@@ -15,7 +15,6 @@
 		out.print("<p color='red'>Please enter in proper values</p>");
 	}%>
 <%User user = ((AdminHome)session.getAttribute("adminhome")).getUser(Integer.parseInt(request.getParameter("euser"))); %>
-<a href="adminhome.jsp" id="goback">Go back</a>
 <center>
 <h1>Edit User</h1>
 <form method="post" action="EditUserAction.jsp">

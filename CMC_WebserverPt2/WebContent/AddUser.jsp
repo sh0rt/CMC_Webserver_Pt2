@@ -6,12 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add User</title>
 </head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
 <%if(request.getParameter("Error") != null){
 	if(request.getParameter("Error").equals("1"))
 		out.print("<font color=\"red\">Error: Please enter in proper values</font>");
 	}%>
-	<a href="ManageUsers.jsp">Go back</a>
+	<a href="ManageUsers.jsp" id="goback">Go back</a>
+	<a href="logout.jsp" id="logout">Log Out</a>
 	<center>
 <h1>Add User</h1>
 <form method="post" action="AddUserAction.jsp">
