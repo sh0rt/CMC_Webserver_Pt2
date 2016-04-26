@@ -34,10 +34,10 @@
 				Password:&nbsp; <input name="password" type="password"><br>
 			</div>
 			<div style="text-align: center;">
-				<input value="Submit" name="Login" type="Submit">&nbsp;&nbsp;&nbsp;
+				<input value="Submit" name="Login" type="Submit" class="actionButton">&nbsp;&nbsp;&nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input name="reset"
-					value="Reset" type="reset"><br>
+					value="Reset" type="reset" class="actionButton"><br>
 			</div>
 		</form>
 		<center>

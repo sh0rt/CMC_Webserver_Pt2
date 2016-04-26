@@ -76,7 +76,12 @@ p#registerPrompt {
 input {
 	color: #050;
 	background-color: #fed;
-	border: 2px;
+	border: 1px;
+}
+
+input.actionButton {
+	border-style: solid;
+	border-color: gray;
 }
 
 input.newUser {
@@ -156,6 +161,15 @@ div#LogItems {
 }
 
 div#regItems {
+	background-color: #D1D36A;
+	width: 400px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#ManProItems {
 	background-color: #D1D36A;
 	width: 400px;
 	padding: 25px;

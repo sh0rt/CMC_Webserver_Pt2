@@ -146,8 +146,8 @@
 			</tbody>
 		</table>
 		<br>
-	<input name="Search For Schools" type="submit">
-	<input name="Reset Form" type="reset">
+	<input name="Search For Schools" type="submit" class="actionButton">
+	<input name="Reset Form" value="Reset" type="reset" class="actionButton">
 		</div>
 	<br>
 	<br>
