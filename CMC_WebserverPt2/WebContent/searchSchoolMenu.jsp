@@ -5,11 +5,10 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
-
 	<div id="SeaSchMenuItems">
 		<a href="UserHome.jsp" id="goback">Go back</a>
 		<a href="logout.jsp" id="logout">Log Out</a>
-		<h1 id="start">Search Menu</h1>
+		<h1>Search Menu</h1>
 		<br>
 		<table style="text-align: left; height: 500px; width: 974px;"
 			border="1" cellpadding="2" cellspacing="2">
@@ -152,6 +151,6 @@
 		</div>
 	<br>
 	<br>
-	<a href="#start">Return to top</a>
+	<a href="#SeaSchMenuItems">Return to top</a>
 </body>
 </html>
