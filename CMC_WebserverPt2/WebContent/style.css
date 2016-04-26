@@ -37,8 +37,26 @@ a#logoutUH {
 	border-radius: 5px;
 }
 
+a#logoutAH {
+	background-color: #D1D36A;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+a#logoutMS {
+	background-color: #D1D36A;
+	padding: 5px;
+	border-radius: 5px;
+}
+
 a#goback {
 	float: left;
+	background-color: #D1D36A;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+a#gobackMS {
 	background-color: #D1D36A;
 	padding: 5px;
 	border-radius: 5px;
@@ -80,6 +98,33 @@ div#UserHomeItems {
 div#ManProItems {
 	background-color: #D1D36A;
 	width: 300px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#AdmMenItems {
+	background-color: #D1D36A;
+	width: 300px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#ManUseItems {
+	background-color: #D1D36A;
+	width: 700px;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#ManSchItems {
+	background-color: #D1D36A;
+	width: 2000px;
 	padding: 25px;
 	margin-left: auto;
 	margin-right: auto;
