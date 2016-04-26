@@ -23,7 +23,7 @@ if(request.getParameter("Error") != null){
 	
 		%>
 
-<h1>Edit User</h1>
+<h1>Edit School</h1>
 
 <table border="3">
 <tbody>
