@@ -5,6 +5,7 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+<form action="SearchSchoolsAction.jsp" method="post">
 	<div id="SeaSchMenuItems">
 		<a href="UserHome.jsp" id="goback">Go back</a>
 		<a href="logout.jsp" id="logout">Log Out</a>
@@ -152,5 +153,6 @@
 	<br>
 	<br>
 	<a href="#SeaSchMenuItems">Return to top</a>
+	</form>
 </body>
 </html>

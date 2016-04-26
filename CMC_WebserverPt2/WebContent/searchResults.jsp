@@ -13,6 +13,14 @@
 	<a href="logout.jsp" id="logout">Log Out</a>
 <center>
 <h1>Search Results</h1>
+<%if(request.getParameter("Error") != null){
+	if(request.getParameter("Error") == "1"){
+	System.out.println("yaa");
+	out.print("<p>succesfully saved School!</p>");
+	}else if(request.getParameter("Error") == "2"){
+	out.print("<p>An error occured</p>");
+	}
+}%>
 <table border="3">
 <tbody>
 
@@ -20,14 +28,14 @@
 <td>
 <form action="SaveSchool.jsp" method="post">
 <input type="submit" name="Save" value="Save">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school1")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id1").toString()%>">
 </form>
 </td><td width="400px">
-<center><%=student.getSchoolByID(Integer.parseInt(request.getParameter("school1"))).getSchool() %></center>
+<center><%= student.getSchoolByID(Integer.parseInt(session.getAttribute("id1").toString())).getSchool() %></center>
 </td><td>
 <form action="viewSchool.jsp" method="post">
 <input type="submit" name="view" value="View">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school1")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id1").toString()%>">
 </form>
 </tr>
 
@@ -35,14 +43,14 @@
 <td>
 <form action="SaveSchool.jsp" method="post">
 <input type="submit" name="Save" value="Save">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school2")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id2").toString()%>">
 </form>
 </td><td width="400px">
-<center><%=student.getSchoolByID(Integer.parseInt(request.getParameter("school2"))).getSchool() %></center>
+<center><%= student.getSchoolByID(Integer.parseInt(session.getAttribute("id2").toString())).getSchool() %></center>
 </td><td>
 <form action="viewSchool.jsp" method="post">
 <input type="submit" name="view" value="View">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school2")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id2").toString()%>">
 </form>
 </tr>
 
@@ -50,14 +58,14 @@
 <td>
 <form action="SaveSchool.jsp" method="post">
 <input type="submit" name="Save" value="Save">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school3")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id3").toString()%>">
 </form>
 </td><td width="400px">
-<center><%=student.getSchoolByID(Integer.parseInt(request.getParameter("school3"))).getSchool() %></center>
+<center><%= student.getSchoolByID(Integer.parseInt(session.getAttribute("id3").toString())).getSchool() %></center>
 </td><td>
 <form action="viewSchool.jsp" method="post">
 <input type="submit" name="view" value="View">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school3")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id3").toString()%>">
 </form>
 </tr>
 
@@ -65,14 +73,14 @@
 <td>
 <form action="SaveSchool.jsp" method="post">
 <input type="submit" name="Save" value="Save">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school4")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id4").toString()%>">
 </form>
 </td><td width="400px">
-<center><%=student.getSchoolByID(Integer.parseInt(request.getParameter("school4"))).getSchool() %></center>
+<center><%= student.getSchoolByID(Integer.parseInt(session.getAttribute("id4").toString())).getSchool() %></center>
 </td><td>
 <form action="viewSchool.jsp" method="post">
 <input type="submit" name="view" value="View">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school4")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id4").toString()%>">
 </form>
 </tr>
 
@@ -80,14 +88,14 @@
 <td>
 <form action="SaveSchool.jsp" method="post">
 <input type="submit" name="Save" value="Save">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school5")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id5").toString()%>">
 </form>
 </td><td width="400px">
-<center><%=student.getSchoolByID(Integer.parseInt(request.getParameter("school5"))).getSchool() %></center>
+<center><%= student.getSchoolByID(Integer.parseInt(session.getAttribute("id5").toString())).getSchool() %></center>
 </td><td>
 <form action="viewSchool.jsp" method="post">
 <input type="submit" name="view" value="View">
-<input type="hidden" name="schoolID" value="<%=request.getParameter("school5")%>">
+<input type="hidden" name="schoolID" value="<%=session.getAttribute("id5").toString()%>">
 </form>
 </tr>
 

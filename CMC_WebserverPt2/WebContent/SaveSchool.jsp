@@ -7,7 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%StudentHome student =  ((StudentHome)session.getAttribute("studenthome"));
+<%
+try{StudentHome student =  ((StudentHome)session.getAttribute("studenthome"));
+student.saveSchool(Integer.parseInt(request.getParameter("schoolID")));
+response.sendRedirect("searchResults.jspError=1");
+}catch(Exception ex){
+	ex.printStackTrace(System.out);
+	response.sendRedirect("searchResults.jsp?Error=2");
+}
 
 %>
 </body>
