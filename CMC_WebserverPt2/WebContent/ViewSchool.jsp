@@ -14,16 +14,19 @@
 <form method="post" action="EditSchoolAction.jsp">
 <%
 School school = null;
+String[] emphasis = new String[5];
 if(request.getParameter("Error") != null){
 	if(request.getParameter("Error") == "1")
 		out.print("<p color='red'>Please enter in proper values</p>");
 	    out.print("<input type='hidden' name='schoolID' value="+ request.getParameter("ID")+">");
 	    school = ((AdminHome)session.getAttribute("adminhome")).getSchools().get(Integer.parseInt(request.getParameter("ID"))); 
+	    emphasis = ((AdminHome)session.getAttribute("adminhome")).getEmphasis(Integer.parseInt(request.getParameter("ID"))+1);
 	    
-	}else
+	}else{
 	  school = ((AdminHome)session.getAttribute("adminhome")).getSchools().get(Integer.parseInt(request.getParameter("schoolID"))); 
+	  emphasis = ((AdminHome)session.getAttribute("adminhome")).getEmphasis(Integer.parseInt(request.getParameter("schoolID"))+1);
       out.print("<input type='hidden' name='schoolID' value="+ request.getParameter("schoolID")+">");
-	
+	}
 		%>
 
 <h1>Edit School</h1>
@@ -97,11 +100,11 @@ if(request.getParameter("Error") != null){
 <tr>
 <td width="160px">Emphasis</td>
 <td>
-<input type="text" name= "emphasis1" value="<%=school.getEmphasisfive()[0]%>"><br>
-<input type="text" name= "emphasis2" value="<%=school.getEmphasisfive()[1]%>"><br>
-<input type="text" name= "emphasis3" value="<%=school.getEmphasisfive()[2]%>"><br>
-<input type="text" name= "emphasis4" value="<%=school.getEmphasisfive()[3]%>"><br>
-<input type="text" name= "emphasis5" value="<%=school.getEmphasisfive()[4]%>"><br>
+<input type="text" name= "emphasis1" value="<%=emphasis[0]%>"><br>
+<input type="text" name= "emphasis2" value="<%=emphasis[1]%>"><br>
+<input type="text" name= "emphasis3" value="<%=emphasis[2]%>"><br>
+<input type="text" name= "emphasis4" value="<%=emphasis[3]%>"><br>
+<input type="text" name= "emphasis5" value="<%=emphasis[4]%>"><br>
 </td>
 </tr>
 </tbody>

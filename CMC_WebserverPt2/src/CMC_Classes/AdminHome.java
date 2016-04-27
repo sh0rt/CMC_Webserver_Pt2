@@ -92,7 +92,8 @@ public class AdminHome {
 			return null;
 		else {
 			database.editSchool(school, state,location, control, numStudents, percentFemale, satVerbal, satMath,
-				      expenses, percentFinAid, numApplicants, percentAdmitted, percentEnrolled, academicScale, socialScale, qualOflife,emphasis,0);
+				      expenses, percentFinAid, numApplicants, percentAdmitted, percentEnrolled, academicScale, socialScale, qualOflife,emphasis,i);
+			/*
 			schools.get(i).setState(state);
 			schools.get(i).setLocation(location);
 			schools.get(i).setControl(control);
@@ -108,6 +109,7 @@ public class AdminHome {
 			schools.get(i).setAcademicScale(academicScale);
 			schools.get(i).setSocialscale(socialScale);
 			schools.get(i).setQualOfLife(qualOflife);
+			*/
 		}
 		return schools.get(i);
 
@@ -253,5 +255,8 @@ public class AdminHome {
 			throw new IllegalArgumentException();
 		return this.database.getUsers().get(ID);
 	}
-
+	
+public String[] getEmphasis(int id){
+	return database.getSchoolEmphasisByID(id);
+}
 }
