@@ -8,11 +8,7 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
-	<div align="right">
-		<p id="registerPrompt">
-			Not in our System? <a href="Register.jsp">Register here!</a>
-		<p />
-	</div>
+
 	<div id="LogItems">
 		<%
 			if (request.getParameter("Error") != null)
@@ -37,14 +33,17 @@
 			<div style="text-align: center;">
 				<input value="Login" name="Login" type="Submit" class="actionButton">&nbsp;&nbsp;&nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input name="reset" value="Reset" type="reset" class="actionButton"><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input name="reset"
+					value="Reset" type="reset" class="actionButton"><br>
 			</div>
 		</form>
 		<center>
 			<p>Admin login Username: user Password: pass</p>
 			<p>Student login Username: juser Password: user
 		</center>
+		<p id="registerPrompt">
+			Not in our System? <a href="Register.jsp">Register here!</a>
+		<p />
 	</div>
 </body>
 </html>

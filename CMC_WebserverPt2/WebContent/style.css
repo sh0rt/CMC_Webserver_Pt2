@@ -67,7 +67,6 @@ a#gobackMS {
 }
 
 p#registerPrompt {
-	float: right;
 	background-color: #D1D36A;
 	padding: 10px;
 	border-radius: 10px;
@@ -136,7 +135,7 @@ div#AdmMenItems {
 div#ManUseItems {
 	background-color: #D1D36A;
 	width: 700px;
-	padding: 25px;
+	padding: 15px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 25px;
@@ -230,4 +229,27 @@ div#AdmSeaResItems {
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 25px;
+}
+
+div#pagewrap {
+	margin: 15px auto;
+	position: relative;
+}
+
+div#sidebar {
+	background-color: #D1D36A;
+	padding: 10px;
+	border-radius: 25px;
+	width: 175px;
+	position: fixed;
+	margin-left: -225px;
+}
+
+div#sidebarMU {
+	background-color: #D1D36A;
+	padding: 10px;
+	border-radius: 25px;
+	width: 125px;
+	position: fixed;
+	margin-left: -225px;
 }

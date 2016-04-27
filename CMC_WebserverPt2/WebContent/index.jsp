@@ -22,7 +22,7 @@
 			<p>Let's find you a handy dandy college.</p>
 			<br>
 			<form action="login.jsp">
-				<input type="submit" value="Continue to Website">
+				<input type="submit" value="Continue to Website" class="actionButton">
 			</form>
 		</center>
 	</div>
