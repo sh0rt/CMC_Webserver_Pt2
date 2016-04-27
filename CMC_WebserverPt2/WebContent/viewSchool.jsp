@@ -13,8 +13,13 @@
 	<div id="VieSchItems">
 		<div id="pagewrap">
 			<div id="sidebar">
-				<a href="searchResults.jsp">Go back</a><br>
-				<br> <a href="#VieSchItems">Return to top</a>
+				<a href="searchResults.jsp">Go back</a><hr>
+				<a href="#rec1">Recommendation #1</a><br>
+				<a href="#rec2">Recommendation #2</a><br>
+				<a href="#rec3">Recommendation #3</a><br>
+				<a href="#rec4">Recommendation #4</a><br>
+				<a href="#rec5">Recommendation #5</a><br>
+				<a href="#VieSchItems">Return to top</a>
 			</div>
 			<%
 					
@@ -132,6 +137,7 @@
 				</table>
 				<br> <br> <br> <span style="font-weight: bold;">MAY
 					WE ALSO RECOMMEND....</span><br> <br>
+					<p id="rec1">Recommendation No. 1</p>
 				<table style="text-align: left; height: 480px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
@@ -243,6 +249,7 @@
 				</table>
 				<input name="saveschool1" value="save" type="submit"><br>
 				<br>
+				<p id="rec2">Recommendation No. 2</p>
 				<table style="text-align: left; height: 480px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
@@ -354,6 +361,7 @@
 				</table>
 				<input name="saveschool2" value="save" type="submit"><br>
 				<br>
+				<p id="rec3">Recommendation No. 3</p>
 				<table style="text-align: left; height: 480px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
@@ -465,6 +473,7 @@
 				</table>
 				<input name="saveschool3" value="save" type="submit"><br>
 				<br>
+				<p id="rec4">Recommendation No. 4</p>
 				<table style="text-align: left; height: 480px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
@@ -576,6 +585,7 @@
 				</table>
 				<input name="saveschool4" value="save" type="submit"><br>
 				<br>
+				<p id="rec5">Recommendation No. 5</p>
 				<table style="text-align: left; height: 480px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
@@ -686,9 +696,7 @@
 					</tbody>
 				</table>
 				<input name="saveschool5" value="save" type="submit"><br>
-				<br> <a href="#VieSchItems">Return to top</a>
 			</form>
-
 		</div>
 	</div>
 </body>
