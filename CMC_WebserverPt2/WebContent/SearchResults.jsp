@@ -93,22 +93,31 @@ action="saveSchoolAction.jsp">
 value="Save" type="button">
 </td>
 
-<td style="vertical-align: top; width: 447px;"><input
+<td style="vertical-align: top; width: 447px;"><form name="row4view" method="post" 
+action="viewSchoolAction.jsp"><input
 readonly="readonly" name="School"></td>
-<td style="vertical-align: top; width: 107px;"><input name="View"
+<td style="vertical-align: top; width: 107px;">
+<input type="hidden" name="schoolID" value="Integer.parseInt(request.getParameter("school4"))">
+<input name="View"
 value="View" type="button">
 </td>
 </tr>
 
 
 <tr>
-<td style="vertical-align: top; width: 116px;"><input name="Save"
+<td style="vertical-align: top; width: 116px;"><form name="row5save" method="post" 
+action="saveSchoolAction.jsp">
+<input type="hidden" name="schoolID" value="Integer.parseInt(request.getParameter("school5"))">
+<input name="Save"
 value="Save" type="button">
 </td>
 
-<td style="vertical-align: top; width: 447px;"><input
+<td style="vertical-align: top; width: 447px;"><form name="row4view" method="post" 
+action="viewSchoolAction.jsp"><input
 readonly="readonly" name="School"></td>
-<td style="vertical-align: top; width: 107px;"><input name="View"
+<td style="vertical-align: top; width: 107px;">
+<input type="hidden" name="schoolID" value="Integer.parseInt(request.getParameter("school5"))">
+<input name="View"
 value="View" type="button">
 </td>
 </tr>

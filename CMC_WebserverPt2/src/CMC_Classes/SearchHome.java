@@ -55,7 +55,7 @@ public class SearchHome {
 	 * @param emphasis
 	 * @return schools
 	 */
-	public School[] recommend(School clicked) {
+	public School[] getRecommend(School clicked) {
 		ArrayList<School> schools = database.getSchools();
 		int[] info = new int[schools.size()];
 		for (int i = 0; i < schools.size(); i++) {
