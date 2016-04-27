@@ -231,3 +231,17 @@ div#AdmSeaResItems {
 	margin-right: auto;
 	border-radius: 25px;
 }
+
+div#pagewrap {
+	margin: 15px auto;
+	position: relative;
+}
+
+div#sidebar {
+	background-color: #D1D36A;
+	padding: 10px;
+	border-radius: 25px;
+	width: 100px;
+	position: fixed;
+	margin-left: -175px;
+}

@@ -29,9 +29,9 @@
 					} catch (NullPointerException npe) {
 						out.print(error);
 					}
-					
-					if(i == 0) {
-						%>
+
+					if (i == 0) {
+				%>
 				<tr>
 					<td><input type="submit" value="Remove" id="removeButton"></td>
 					<td><%=error%></td>
@@ -39,7 +39,7 @@
 				</tr>
 				<%
 					}
-					for (int j = 0;j < i; j++) {
+					for (int j = 0; j < i; j++) {
 				%>
 				<tr>
 					<td><input type="submit" value="Remove" id="removeButton"></td>
@@ -48,9 +48,10 @@
 							try {
 									out.print(stuSavedSchools.get(i).getName());
 								} catch (IndexOutOfBoundsException iobe) {
-						%><%=error%> <%
- 	}
- %>
+						%><%=error%>
+						<%
+							}
+						%>
 					</td>
 					<td><input type="submit" value="View" id="viewButton"></td>
 				</tr>
@@ -59,12 +60,19 @@
 				%>
 			</tbody>
 		</table>
-		<%if(i == 0) {%>
+		<%
+			if (i == 0) {
+		%>
 		<div id="HelpSearch">
-		<p>It looks like you don't have any schools saved quite yet.<br>Would you like to <a href="searchSchoolMenu.jsp">search</a>
-		for one? We will even<br>make
-		some recommendations for you!</p></div>
-		<%} %>
+			<p>
+				It looks like you don't have any schools saved quite yet.<br>Would
+				you like to <a href="searchSchoolMenu.jsp">search</a> for one? We
+				will even<br>make some recommendations for you!
+			</p>
+		</div>
+		<%
+			}
+		%>
 	</div>
 </body>
 </html>
