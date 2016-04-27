@@ -48,8 +48,7 @@
 							try {
 									out.print(stuSavedSchools.get(i).getName());
 								} catch (IndexOutOfBoundsException iobe) {
-						%><%=error%>
-						<%
+						%><%=error%> <%
 							}
 						%>
 					</td>

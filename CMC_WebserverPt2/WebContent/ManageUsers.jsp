@@ -17,8 +17,8 @@
 <body>
 	<div id="ManUseItems">
 		<div id="pagewrap">
-			<div id="sidebar">
-			<a href="#ManUseItems">Return to top</a>
+			<div id="sidebarMU">
+				<a href="#ManUseItems">Return to top</a>
 			</div>
 			<a href="logout.jsp" id="logout">Log Out</a> <a href="adminhome.jsp"
 				id="goback">Go back</a>

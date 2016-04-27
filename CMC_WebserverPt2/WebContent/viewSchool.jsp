@@ -13,7 +13,8 @@
 	<div id="VieSchItems">
 		<div id="pagewrap">
 			<div id="sidebar">
-				<a href="searchResults.jsp">Go back</a><hr>
+				<a href="searchResults.jsp">Back to results</a><br>
+				<a href="UserHome.jsp">Main menu</a><hr>
 				<a href="#rec1">Recommendation #1</a><br>
 				<a href="#rec2">Recommendation #2</a><br>
 				<a href="#rec3">Recommendation #3</a><br>

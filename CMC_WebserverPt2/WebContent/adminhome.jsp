@@ -13,9 +13,12 @@
 			response.sendRedirect("login.jsp?Error=5");
 	%>
 	<div id="AdmMenItems">
+		<%User user = (User) session.getAttribute("user");%>
 		<h1>Administrator Menu</h1>
-		<a href="ManageSchools.jsp">Manage Universities</a><br> 
-		<a href="ManageUsers.jsp">Manage Users</a>
+		<p style="font-weight: bold">
+			Hello,
+			<%=user.getFirstName()%>.<hr>
+
 		<hr>
 		<a href="logout.jsp" id="logoutAH">Log Out</a>
 	</div>
