@@ -187,5 +187,23 @@ public User addUser(String firstname, String lastname, String username, String p
     public void saveSchool(int id, String user){
     	dummydatabase.user_saveSchool(user, this.getSchool(id).getSchool());
     }
+    public String[] getSchoolEmphasisByID(int id){
+    	String school = this.getSchool(id).getSchool();
+    	String[][] emphasis = dummydatabase.university_getNamesWithEmphases();
+    	String[] retemp = new String[5];
+    	int count = 0;
+    	for(int i=0; i<emphasis.length; i++){
+    		System.out.print(emphasis[i][0] + ": " + emphasis[i][1]+ "\n");
+    	}
+    	for(int i=0; i<emphasis.length; i++){
+    		if(school.equals(emphasis[i][0])){
+    			retemp[count] = emphasis[i][1];
+    			count ++;
+    		}
+    		if(count == 5)
+    			i = 1000;
+    	}
+    	return retemp;
+    }
 }
 
