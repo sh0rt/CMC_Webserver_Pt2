@@ -19,15 +19,27 @@
 					<td colspan="3" id="school">School</td>
 				</tr>
 				<%
+					int i = 0;
 					User user = (User) session.getAttribute("user");
 					ArrayList<School> stuSavedSchools = new ArrayList<School>();
 					String error = "User has no saved schools";
 					try {
 						stuSavedSchools = user.getSavedSchools();
+						i = stuSavedSchools.size();
 					} catch (NullPointerException npe) {
 						out.print(error);
 					}
-					for (int i = 0; i < 5; i++) {
+					
+					if(i == 0) {
+						%>
+				<tr>
+					<td><input type="submit" value="Remove" id="removeButton"></td>
+					<td><%=error%></td>
+					<td><input type="submit" value="View" id="viewButton"></td>
+				</tr>
+				<%
+					}
+					for (int j = 0;j < i; j++) {
 				%>
 				<tr>
 					<td><input type="submit" value="Remove" id="removeButton"></td>
@@ -47,6 +59,12 @@
 				%>
 			</tbody>
 		</table>
+		<%if(i == 0) {%>
+		<div id="HelpSearch">
+		<p>It looks like you don't have any schools saved quite yet.<br>Would you like to <a href="searchSchoolMenu.jsp">search</a>
+		for one? We will even<br>make
+		some recommendations for you!</p></div>
+		<%} %>
 	</div>
 </body>
 </html>
