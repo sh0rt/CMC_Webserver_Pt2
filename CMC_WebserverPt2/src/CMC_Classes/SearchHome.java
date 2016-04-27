@@ -55,6 +55,118 @@ public class SearchHome {
 	 * @param emphasis
 	 * @return schools
 	 */
+	public int[] recommend(School clicked) {
+		School[] recommendations = new School[5];
+		ArrayList<School> schools = database.getSchools();
+		int[] info = new int[schools.size()];
+		for(int i=0; i<schools.size(); i++) {
+		if(schools.get(i).getSchool().contains(clicked.getSchool())) {
+			info[i] += 10;
+		}
+		  
+		if(schools.get(i).getSchool().contains(clicked.getName())) {
+			info[i] += 10;
+		}
+		
+		if(schools.get(i).getSchool().contains(clicked.getLocation())) {
+			info[i] += 10;
+		}
+		
+		if(schools.get(i).getSchool().contains(clicked.getControl())) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getNumStudents() - clicked.getNumStudents()) <= 1000) {
+			info[i] +=10;
+		}
+		
+		if(Math.abs(schools.get(i).getSatVerbal() - clicked.getSatVerbal()) <= 100) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getSatMath() - clicked.getSatMath()) <= 100) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getNumApplicants() - clicked.getNumApplicants()) <= 5000) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getPercentFemale() - clicked.getPercentFemale()) <= 25) {
+			info[i] += 10; 
+		}
+		
+		if(Math.abs(schools.get(i).getExpenses() - clicked.getExpenses()) <= 500) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getPercentFinAid() - clicked.getPercentFinAid()) <= 25) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getPercentAdmitted() - clicked.getPercentAdmitted()) <= 30) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getPercentEnrolled() - clicked.getPercentEnrolled()) <= 30) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getAcademicScale() - clicked.getAcademicScale()) <= 2) {
+			info[i] += 10;
+		}
+		
+		if(Math.abs(schools.get(i).getSocialscale() - clicked.getSocialscale()) <= 2) {
+			info[i] += 10;
+ 		}
+		
+		if(Math.abs(schools.get(i).getQualOfLife() - clicked.getQualOfLife()) <= 2) {
+			info[i] += 10;
+		}
+		
+		}
+		int highest = 0;
+		int index = 0;
+		int[] temp = new int[10];
+		int[] count = info;
+		for (int p = 0; p < 5; p++) { // find highest
+			for (int g = 0; g < schools.size(); g++) {
+				if (count[g] > highest) {
+					highest = count[g];
+					index = g;
+				}
+			}
+		//	System.out.println(highest + " " + index);
+			temp[p] = index; // index in the array of schools
+			highest = 0;
+			count[index] = 0;	
+		}
+		for (int h = 0; h < 5; h++) {
+			for (int k = 0; k < schools.size(); k++) {
+				if (count[k] > highest) {
+					highest = count[k];
+					index = k;
+				}
+			}
+			temp[h + 5] = index;
+			highest = 0;
+			count[index] = 0;
+		}
+		recommendations[0] = schools.get(temp[0]);
+		recommendations[1] = schools.get(temp[1]);
+		recommendations[2] = schools.get(temp[2]);
+		recommendations[3] = schools.get(temp[3]);
+		recommendations[4] = schools.get(temp[4]);
+		recommend[0] = schools.get(temp[5]);
+		recommend[1] = schools.get(temp[6]);
+		recommend[2] = schools.get(temp[7]);
+		recommend[3] = schools.get(temp[8]);
+		recommend[4] = schools.get(temp[9]);
+		this.top10 = temp;
+		return temp;
+		
+	}
+	
 	public int[] search(String name, String state, String location, String control, int[] numStudents,
 			double[] satVerbal, double[] satMath, int[] numApplicants, double[] percentFemale, double[] expenses,
 			double[] percentFinAid, double[] percentAdmitted, double[] percentEnrolled, int[] academicScale,
