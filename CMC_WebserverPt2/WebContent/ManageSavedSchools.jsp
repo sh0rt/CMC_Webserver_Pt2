@@ -7,42 +7,46 @@
 <title>Manage Schools</title>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 </head>
-	<link rel="stylesheet" href="style.css" type="text/css"></link>
+<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
-	<h1>Manage Saved Schools</h1>
-	<table border="3" id="ManSavSch">
-		<tbody>
-			<tr>
-				<td colspan="3" id="school">School</td>
-			</tr>
-			<%
-				User user = (User) session.getAttribute("user");
-				ArrayList<School> stuSavedSchools = new ArrayList<School>();
-				String error = "User has no saved schools";
-				try {
-					stuSavedSchools = user.getSavedSchools();
-				} catch (NullPointerException npe) {
-					out.print(error);
-				}
-				for (int i = 0; i < 5; i++) {
-			%>
-			<tr>
-				<td><input type="submit" value="Remove"></td>
-				<td>
-					<%
-						try {
-								out.print(stuSavedSchools.get(i).getName());
-							} catch (IndexOutOfBoundsException iobe) {
-					%><%=error%> <%
+	<a href="UserHome.jsp" id="goback">Go back</a>
+	<a href="logout.jsp" id="logout">Log Out</a>
+	<div id="ManSavSchItems">
+		<h1>Manage Saved Schools</h1>
+		<table border="3" id="ManSavSch">
+			<tbody>
+				<tr>
+					<td colspan="3" id="school">School</td>
+				</tr>
+				<%
+					User user = (User) session.getAttribute("user");
+					ArrayList<School> stuSavedSchools = new ArrayList<School>();
+					String error = "User has no saved schools";
+					try {
+						stuSavedSchools = user.getSavedSchools();
+					} catch (NullPointerException npe) {
+						out.print(error);
+					}
+					for (int i = 0; i < 5; i++) {
+				%>
+				<tr>
+					<td><input type="submit" value="Remove" id="removeButton"></td>
+					<td>
+						<%
+							try {
+									out.print(stuSavedSchools.get(i).getName());
+								} catch (IndexOutOfBoundsException iobe) {
+						%><%=error%> <%
  	}
  %>
-				</td>
-				<td><input type="submit" value="View"></td>
-			</tr>
-			<%
-				}
-			%>
-		</tbody>
-	</table>
+					</td>
+					<td><input type="submit" value="View" id="viewButton"></td>
+				</tr>
+				<%
+					}
+				%>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>

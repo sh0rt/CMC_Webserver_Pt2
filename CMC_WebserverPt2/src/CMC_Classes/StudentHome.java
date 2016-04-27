@@ -165,6 +165,10 @@ public class StudentHome {
 	}
 	
 	public School getSchoolByID(int id){
+		id +=1;
 		return database.getSchool(id);
+	}
+	public void saveSchool(int id){
+		database.saveSchool( id, this.user.getUsername());
 	}
 }

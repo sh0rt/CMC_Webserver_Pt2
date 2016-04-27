@@ -184,5 +184,8 @@ public User addUser(String firstname, String lastname, String username, String p
     public void removeUser(String name){
     	dummydatabase.user_deleteUser(name);
     }
+    public void saveSchool(int id, String user){
+    	dummydatabase.user_saveSchool(user, this.getSchool(id).getSchool());
+    }
 }
 
