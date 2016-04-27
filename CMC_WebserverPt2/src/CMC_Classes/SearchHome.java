@@ -125,7 +125,7 @@ public class SearchHome {
 		}
 		
 		}
-		int highest = 0;
+		int highest = 0; 
 		int index = 0;
 		int[] temp = new int[10];
 		int[] count = info;
