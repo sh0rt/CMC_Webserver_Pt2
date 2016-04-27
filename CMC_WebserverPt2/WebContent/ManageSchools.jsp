@@ -14,10 +14,11 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+
 	<a id="start"></a>
 	<div id="ManSchItems">
-		<a href="adminhome.jsp" id="gobackMS">Go back</a> <a href="logout.jsp"
-			id="logoutMS">Log Out</a> <br>
+		<a href="adminhome.jsp" id="goback">Go back</a> <a href="logout.jsp"
+			id="logout">Log Out</a> <br>
 		<br>
 		<center>
 			<table border="3">

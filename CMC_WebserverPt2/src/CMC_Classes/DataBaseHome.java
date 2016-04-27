@@ -89,12 +89,16 @@ public User addUser(String firstname, String lastname, String username, String p
     public ArrayList<School> getSchools(){
       String[][] temp = dummydatabase.university_getUniversities();
       ArrayList<School> ret = new ArrayList<School>();
-      
       for(int i=1; i<temp.length; i++){
-        ret.add( new School(temp[i][0],temp[i][1],temp[i][2],temp[i][3],Integer.parseInt(temp[i][4]),Double.parseDouble(temp[i][5]),Double.parseDouble(temp[i][6]),
-                            Double.parseDouble(temp[i][7]),Double.parseDouble(temp[i][8]),Double.parseDouble(temp[i][9]),Integer.parseInt(temp[i][10]),
-                            Double.parseDouble(temp[i][11]),Double.parseDouble(temp[i][12]),Integer.parseInt(temp[i][13]),
-                            Integer.parseInt(temp[i][14]),Integer.parseInt(temp[i][15])));
+    	  School school = new School(temp[i][0],temp[i][1],temp[i][2],temp[i][3],Integer.parseInt(temp[i][4]),Double.parseDouble(temp[i][5]),Double.parseDouble(temp[i][6]),
+                  Double.parseDouble(temp[i][7]),Double.parseDouble(temp[i][8]),Double.parseDouble(temp[i][9]),Integer.parseInt(temp[i][10]),
+                  Double.parseDouble(temp[i][11]),Double.parseDouble(temp[i][12]),Integer.parseInt(temp[i][13]),
+                  Integer.parseInt(temp[i][14]),Integer.parseInt(temp[i][15]));
+          String[] emp = this.getSchoolEmphasisByID(i);
+    	  for(int t=0; t<5; t++){
+    		  school.addEmphasis(emp[t]);
+    	  }
+        ret.add( school);
       }
       return ret;
     }
@@ -147,10 +151,12 @@ public User addUser(String firstname, String lastname, String username, String p
   
       String[][] temp = dummydatabase.university_getEmphases();
       for(int i=0; i<temp[id].length; i++){
-       dummydatabase.university_removeUniversityEmphasis(school, temp[id][i]); 
+       if(dummydatabase.university_removeUniversityEmphasis(school, temp[id][i]) == -1)
+    	   System.out.println("emphasis is garbage removing"); 
       }
       for(int i=0; i<emphasis.length; i++){
-       dummydatabase.university_addUniversityEmphasis(school, emphasis[i]); 
+       if(dummydatabase.university_addUniversityEmphasis(school, emphasis[i]) == -1)
+    	   System.out.println("adding emphasis is complete garbage \n ----------"); 
       }
       
       return new School(school,state,location,control,numStudents,satVerbal,satMath,numApplicants,
@@ -186,6 +192,24 @@ public User addUser(String firstname, String lastname, String username, String p
     }
     public void saveSchool(int id, String user){
     	dummydatabase.user_saveSchool(user, this.getSchool(id).getSchool());
+    }
+    public String[] getSchoolEmphasisByID(int id){
+    	String school = this.getSchool(id).getSchool();
+    	String[][] emphasis = dummydatabase.university_getNamesWithEmphases();
+    	String[] retemp = new String[5];
+    	int count = 0;
+    	for(int i=0; i<emphasis.length; i++){
+    		//System.out.print(emphasis[i][0] + ": " + emphasis[i][1]+ "\n");
+    	}
+    	for(int i=0; i<emphasis.length; i++){
+    		if(school.equals(emphasis[i][0])){
+    			retemp[count] = emphasis[i][1];
+    			count ++;
+    		}
+    		if(count == 5)
+    			i = 1000;
+    	}
+    	return retemp;
     }
 }
 

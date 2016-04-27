@@ -153,7 +153,7 @@ div#ManSchItems {
 
 div#LogItems {
 	background-color: #D1D36A;
-	width: 500px;
+	width: 400px;
 	padding: 25px;
 	margin-left: auto;
 	margin-right: auto;
@@ -178,4 +178,56 @@ div#ManProItems {
 	border-radius: 25px;
 }
 
+div#HelpSearch {
+	background-color: #D1D36A;
+	width: 400px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#IndexItems {
+	background-color: #D1D36A;
+	width: 400px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#VieSchItems {
+	background-color: #D1D36A;
+	width: 600px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#SeaResItems {
+	background-color: #D1D36A;
+	width: 600px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#AdmVieSchItems {
+	background-color: #D1D36A;
+	width: 600px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#AdmSeaResItems {
+	background-color: #D1D36A;
+	width: 800px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
 }
