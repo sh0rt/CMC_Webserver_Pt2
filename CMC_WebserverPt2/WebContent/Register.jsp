@@ -13,6 +13,7 @@
 		<center>
 			<h1>New User Registration</h1>
 			<%
+				try {
 				String i = request.getParameter("Error");
 				if (i.equals("1")) {%>
 					<p class="ErrorMessage">Passwords did not match.</p>
@@ -22,7 +23,10 @@
 					<p class="ErrorMessage">Username is in use. Please choose a different one.</p>
 				<%} else if (i.equals("6")) {%>
 					<p class="ErrorMessage">Something went wrong. Please try again.</p>
-				<%}%>
+				<%}
+				} catch(NullPointerException npe) {
+					
+				}%>
 			<form method="post" action="RegisterAction.jsp">
 				<table border="3">
 					<tr>
