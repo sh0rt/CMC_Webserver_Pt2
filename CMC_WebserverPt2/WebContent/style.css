@@ -72,6 +72,10 @@ p#registerPrompt {
 	border-radius: 10px;
 }
 
+p.ErrorMessage {
+	color: red;
+}
+
 input {
 	color: #050;
 	background-color: #fed;
