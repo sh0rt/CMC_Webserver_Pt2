@@ -13,12 +13,12 @@
 			<div id="sidebar">
 				<a href="UserHome.jsp">Main menu</a>
 				<hr>
-				<a href="#Cat1">Category #1</a><br> 
-				<a href="#Cat2">Category #2</a><br> 
-				<a href="#Cat3">Category #3</a><br> 
-				<a href="#Cat4">Category #4</a><br>
-				<a href="#Cat5">Category #5</a><br>
-				<a href="#Cat6">Category #6</a><br>
+				<a href="#Cat1">Largest Schools</a><br> 
+				<a href="#Cat2">Smallest Schools</a><br> 
+				<a href="#Cat3">Cheapest Schools</a><br> 
+				<a href="#Cat4">Most Expensive Schools</a><br>
+				<a href="#Cat5">Highest Admission rates</a><br>
+				<a href="#Cat6">LowestAdmission rates</a><br>
 				<a href="#BrowseItems">Return to top</a>
 			</div>
 			<%
