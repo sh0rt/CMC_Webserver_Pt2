@@ -19,7 +19,6 @@
 			<%
 				if (request.getParameter("Error") != null) {
 					if (request.getParameter("Error") == "1") {
-						System.out.println("yaa");
 						out.print("<p>succesfully saved School!</p>");
 					} else if (request.getParameter("Error") == "2") {
 						out.print("<p>An error occured</p>");

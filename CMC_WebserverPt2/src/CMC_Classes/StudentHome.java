@@ -171,4 +171,8 @@ public class StudentHome {
 	public void saveSchool(int id){
 		database.saveSchool( id, this.user.getUsername());
 	}
+	
+	public ArrayList<School> getSavedSchools(String name) {
+		return database.getSavedSchools(name);
+	}
 }
