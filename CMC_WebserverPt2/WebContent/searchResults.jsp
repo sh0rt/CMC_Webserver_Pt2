@@ -8,6 +8,10 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+	<%
+		if (session.getAttribute("user") == null || ((User) session.getAttribute("user")).getType() != 'u')
+			response.sendRedirect("login.jsp?Error=5");
+	%>
 	<div id="SeaResItems">
 		<%
 			StudentHome student = ((StudentHome) session.getAttribute("studenthome"));

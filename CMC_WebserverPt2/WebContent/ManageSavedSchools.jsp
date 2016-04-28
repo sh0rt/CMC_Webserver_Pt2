@@ -9,6 +9,10 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+	<%
+		if (session.getAttribute("user") == null || ((User) session.getAttribute("user")).getType() != 'u')
+			response.sendRedirect("login.jsp?Error=5");
+	%>
 	<a href="UserHome.jsp" id="goback">Go back</a>
 	<a href="logout.jsp" id="logout">Log Out</a>
 	<div id="ManSavSchItems">

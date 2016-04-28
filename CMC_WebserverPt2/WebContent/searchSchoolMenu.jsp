@@ -1,3 +1,5 @@
+<%@ page language="java" import="java.util.*" import="CMC_Classes.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
@@ -5,6 +7,10 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+	<%
+		if (session.getAttribute("user") == null || ((User) session.getAttribute("user")).getType() != 'u')
+			response.sendRedirect("login.jsp?Error=5");
+	%>
 	<form action="SearchSchoolsAction.jsp" method="post">
 		<div id="SeaSchMenuItems">
 			<a href="UserHome.jsp" id="goback">Go back</a> <a href="logout.jsp"

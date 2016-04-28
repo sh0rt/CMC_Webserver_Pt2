@@ -12,6 +12,10 @@
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 </head>
 <body>
+	<%
+		if (session.getAttribute("user") == null || ((User) session.getAttribute("user")).getType() != 'u')
+			response.sendRedirect("login.jsp?Error=5");
+	%>
 <%StudentHome student = ((StudentHome)session.getAttribute("studenthome"));
 School school1 = student.getSchoolByID(Integer.parseInt(request.getParameter("schoolID")));
 
