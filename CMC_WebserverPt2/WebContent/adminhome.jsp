@@ -18,7 +18,8 @@
 		<p style="font-weight: bold">
 			Hello,
 			<%=user.getFirstName()%>.<hr>
-
+		<a href="ManageSchools.jsp">Manage Universities</a><br>
+		<a href="ManageUsers.jsp">Manage Users</a>
 		<hr>
 		<a href="logout.jsp" id="logoutAH">Log Out</a>
 	</div>
