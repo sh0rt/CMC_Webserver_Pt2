@@ -8,7 +8,7 @@
 </head>
 	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
-
+<a href="UserHome.jsp" id="goback">Go Back</a> 
 <%TopSchools top = new TopSchools();
 ArrayList<String> largest = top.getPageInfo('a');
 ArrayList<String> smallest = top.getPageInfo('b');
