@@ -10,7 +10,7 @@
 	<%
 try{StudentHome student =  ((StudentHome)session.getAttribute("studenthome"));
 student.saveSchool(Integer.parseInt(request.getParameter("schoolID")));
-response.sendRedirect("searchResults.jspError=1");
+response.sendRedirect("searchResults.jsp?Error=1");
 }catch(Exception ex){
 	ex.printStackTrace(System.out);
 	response.sendRedirect("searchResults.jsp?Error=2");

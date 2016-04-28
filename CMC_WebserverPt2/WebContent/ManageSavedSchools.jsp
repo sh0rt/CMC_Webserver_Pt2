@@ -21,10 +21,11 @@
 				<%
 					int i = 0;
 					User user = (User) session.getAttribute("user");
+					String name = user.getFirstName();
 					ArrayList<School> stuSavedSchools = new ArrayList<School>();
 					String error = "User has no saved schools";
 					try {
-						stuSavedSchools = user.getSavedSchools();
+						stuSavedSchools = ((StudentHome) session.getAttribute("studenthome")).getSavedSchools(name);
 						i = stuSavedSchools.size();
 					} catch (NullPointerException npe) {
 						out.print(error);
