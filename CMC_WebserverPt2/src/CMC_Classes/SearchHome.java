@@ -490,4 +490,95 @@ public class SearchHome {
 		return this.recommend;
 	}
 	//---------------------------implementing correct way-----------------------------------
+	public School[] getRecommend(School clicked) {
+        ArrayList<School> schools = database.getSchools();
+        int[] info = new int[schools.size()];
+        for (int i = 0; i < schools.size(); i++) {
+        	if(!schools.get(i).getSchool().equals(clicked.getName())){
+            if (schools.get(i).getSchool().contains(clicked.getSchool())) {
+                info[i] += 10;
+            }
+
+            if (schools.get(i).getSchool().contains(clicked.getName())) {
+                info[i] += 10;
+            }
+
+            if (schools.get(i).getSchool().contains(clicked.getLocation())) {
+                info[i] += 10;
+            }
+
+            if (schools.get(i).getSchool().contains(clicked.getControl())) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getNumStudents() - clicked.getNumStudents()) <= 1000) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getSatVerbal() - clicked.getSatVerbal()) <= 100) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getSatMath() - clicked.getSatMath()) <= 100) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getNumApplicants() - clicked.getNumApplicants()) <= 5000) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getPercentFemale() - clicked.getPercentFemale()) <= 25) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getExpenses() - clicked.getExpenses()) <= 500) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getPercentFinAid() - clicked.getPercentFinAid()) <= 25) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getPercentAdmitted() - clicked.getPercentAdmitted()) <= 30) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getPercentEnrolled() - clicked.getPercentEnrolled()) <= 30) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getAcademicScale() - clicked.getAcademicScale()) <= 2) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getSocialscale() - clicked.getSocialscale()) <= 2) {
+                info[i] += 10;
+            }
+
+            if (Math.abs(schools.get(i).getQualOfLife() - clicked.getQualOfLife()) <= 2) {
+                info[i] += 10;
+            }
+        	}
+        }
+        	
+        int lowest = 0;
+        int index = 0;
+        int[] highest = new int[5];
+        School[] recommendations = new School[5];
+        for (int g = 0; g < schools.size(); g++) {
+            lowest = 200;
+            for (int u = 0; u < 5; u++) {
+                if (highest[u] < lowest) {
+                    lowest = highest[u];
+                    index = u;
+                }
+            }
+            if (info[g] > lowest) {
+                highest[index] = info[g];
+                recommendations[index] = schools.get(g);
+            }
+        }
+        return recommendations;
+
+    }
 }

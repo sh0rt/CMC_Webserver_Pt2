@@ -153,7 +153,7 @@
 				</tbody>
 			</table>
 			<br> <input name="Search For Schools" type="submit"
-				class="actionButton"> <input name="Reset Form" value="Reset"
+				class="actionButton" value="Search"> <input name="Reset Form" value="Reset"
 				type="reset" class="actionButton"><br><br>
 				<a href="#SeaSchMenuItems">Return to top</a>
 		</div>

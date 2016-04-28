@@ -17,8 +17,9 @@
 			response.sendRedirect("login.jsp?Error=5");
 	%>
 <%StudentHome student = ((StudentHome)session.getAttribute("studenthome"));
-School school1 = student.getSchoolByID(Integer.parseInt(request.getParameter("schoolID")));
-
+School school1 = student.getSchoolByID2(Integer.parseInt(request.getParameter("schoolID")));
+String[] empha = student.getEmphasis(Integer.parseInt(request.getParameter("schoolID")));
+School[] rschools = student.getRecommend(school1);
 %>
 	<div id="VieSchItems">
 		<div id="pagewrap">
@@ -140,578 +141,304 @@ School school1 = student.getSchoolByID(Integer.parseInt(request.getParameter("sc
 							<td style="vertical-align: top; width: 247px;">EMPHASES<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="emphases1" value="<%=school1.getEmphasisfive()[0] %>"><br> <input name="emphases2" value="<%=school1.getEmphasisfive()[1] %>"><br>
-								<input name="emphases3" value="<%=school1.getEmphasisfive()[2] %>"><br> <input
-								name="emphases4" value="<%=school1.getEmphasisfive()[3] %>"><br> <input name="emphases5" value="<%=school1.getEmphasisfive()[4] %>"><br></td>
+								name="emphases1" value="<%=empha[0]%>"><br> <input name="emphases2" value="<%=empha[1] %>"><br>
+								<input name="emphases3" value="<%=empha[2] %>"><br> <input
+								name="emphases4" value="<%=empha[3] %>"><br> <input name="emphases5" value="<%=empha[4] %>"><br></td>
 						</tr>
 					</tbody>
 				</table>
+				<br>
 				<input name="saveschool2" value="save" type="submit"><br>
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(school1.getSchool())+1%>">
 				</form>
 				
 				<br> <br> <br> <span style="font-weight: bold;">MAY
 					WE ALSO RECOMMEND....</span><br> <br>
-					<p id="rec1">Recommendation No. 1</p>
-				<form action=
-				<table style="text-align: left; height: 480px; width: 553px;"
+									<p id="rec1">Recommendation No. 1</p>
+				<table style="text-align: left; height: 110px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">SCHOOL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="school"><br></td>
+								name="school" value="<%=rschools[0].getSchool() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">STATE<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="state"><br></td>
+								name="state" value="<%=rschools[0].getState() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">CONTROL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="control"><br></td>
+								name="control" value="<%=rschools[0].getControl() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">NUMBER OF
 								STUDENTS<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfStudents"><br></td>
+								name="numOfStudents" value="<%=rschools[0].getNumStudents() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FEMALE<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">QUALITY OF LIFE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="female"><br></td>
+								name="numOfStudents" value="<%=rschools[0].getQualOfLife() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT VERBAL<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">ACADEMIC SCALE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="satVerbal"><br></td>
+								name="numOfStudents" value="<%=rschools[0].getAcademicScale() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT MATH<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="satMath"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EXPENSES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="expenses"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FINANCIAL
-								AID<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="financialAid"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">NUMBER OF
-								APPLICANTS<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfApplicants"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ADMITTED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="admitted"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ENROLLED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="enrolled"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">ACADEMIC
-								SCALE (1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="academicScale"><br></td>
-						</tr>
-						<tr>
+												<tr>
 							<td style="vertical-align: top; width: 247px;">SOCIAL SCALE
-								(1-5)<br>
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="socialScale"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">QUALITY OF
-								LIFE SCALE(1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="qualOfLife"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EMPHASES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="emphases1"><br> <input name="emphases2"><br>
-								<input name="emphases3"><br> <input
-								name="emphases4"><br> <input name="emphases5"><br></td>
+								name="numOfStudents" value="<%=rschools[0].getSocialscale() %>" readonly><br></td>
 						</tr>
 					</tbody>
-				</table>
+				</table><br>
+				<form action="SaveSchool.jsp" method="post">
 				<input name="saveschool1" value="save" type="submit"><br>
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[0].getSchool())+1%>">
+				</form>
 				<br>
 				<p id="rec2">Recommendation No. 2</p>
-				<table style="text-align: left; height: 480px; width: 553px;"
+				<table style="text-align: left; height: 110px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">SCHOOL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="school"><br></td>
+								name="school" value="<%=rschools[1].getSchool() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">STATE<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="state"><br></td>
+								name="state" value="<%=rschools[1].getState() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">CONTROL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="control"><br></td>
+								name="control" value="<%=rschools[1].getControl() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">NUMBER OF
 								STUDENTS<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfStudents"><br></td>
+								name="numOfStudents" value="<%=rschools[1].getNumStudents() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FEMALE<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">QUALITY OF LIFE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="female"><br></td>
+								name="numOfStudents" value="<%=rschools[1].getQualOfLife() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT VERBAL<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">ACADEMIC SCALE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="satVerbal"><br></td>
+								name="numOfStudents" value="<%=rschools[1].getAcademicScale() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT MATH<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="satMath"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EXPENSES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="expenses"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FINANCIAL
-								AID<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="financialAid"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">NUMBER OF
-								APPLICANTS<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfApplicants"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ADMITTED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="admitted"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ENROLLED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="enrolled"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">ACADEMIC
-								SCALE (1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="academicScale"><br></td>
-						</tr>
-						<tr>
+												<tr>
 							<td style="vertical-align: top; width: 247px;">SOCIAL SCALE
-								(1-5)<br>
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="socialScale"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">QUALITY OF
-								LIFE SCALE(1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="qualOfLife"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EMPHASES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="emphases1"><br> <input name="emphases2"><br>
-								<input name="emphases3"><br> <input
-								name="emphases4"><br> <input name="emphases5"><br></td>
+								name="numOfStudents" value="<%=rschools[1].getSocialscale() %>" readonly><br></td>
 						</tr>
 					</tbody>
-				</table>
-				<input name="saveschool2" value="save" type="submit"><br>
+				</table><br>
+				<form action="SaveSchool.jsp" method="post">
+				<input name="saveschool1" value="save" type="submit"><br>
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[1].getSchool())%>">
+				</form>
 				<br>
-				<p id="rec3">Recommendation No. 3</p>
-				<table style="text-align: left; height: 480px; width: 553px;"
+									<p id="rec3">Recommendation No. 3</p>
+				<table style="text-align: left; height: 110px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">SCHOOL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="school"><br></td>
+								name="school" value="<%=rschools[2].getSchool() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">STATE<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="state"><br></td>
+								name="state" value="<%=rschools[2].getState() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">CONTROL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="control"><br></td>
+								name="control" value="<%=rschools[2].getControl() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">NUMBER OF
 								STUDENTS<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfStudents"><br></td>
+								name="numOfStudents" value="<%=rschools[2].getNumStudents() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FEMALE<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">QUALITY OF LIFE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="female"><br></td>
+								name="numOfStudents" value="<%=rschools[2].getQualOfLife() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT VERBAL<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">ACADEMIC SCALE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="satVerbal"><br></td>
+								name="numOfStudents" value="<%=rschools[2].getAcademicScale() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT MATH<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="satMath"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EXPENSES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="expenses"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FINANCIAL
-								AID<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="financialAid"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">NUMBER OF
-								APPLICANTS<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfApplicants"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ADMITTED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="admitted"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ENROLLED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="enrolled"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">ACADEMIC
-								SCALE (1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="academicScale"><br></td>
-						</tr>
-						<tr>
+												<tr>
 							<td style="vertical-align: top; width: 247px;">SOCIAL SCALE
-								(1-5)<br>
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="socialScale"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">QUALITY OF
-								LIFE SCALE(1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="qualOfLife"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EMPHASES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="emphases1"><br> <input name="emphases2"><br>
-								<input name="emphases3"><br> <input
-								name="emphases4"><br> <input name="emphases5"><br></td>
+								name="numOfStudents" value="<%=rschools[2].getSocialscale() %>" readonly><br></td>
 						</tr>
 					</tbody>
-				</table>
-				<input name="saveschool3" value="save" type="submit"><br>
+				</table><br>
+				<form action="SaveSchool.jsp" method="post">
+				<input name="saveschool1" value="save" type="submit"><br>
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[2].getSchool())%>">
+				</form>
 				<br>
-				<p id="rec4">Recommendation No. 4</p>
-				<table style="text-align: left; height: 480px; width: 553px;"
+													<p id="rec4">Recommendation No. 4</p>
+				<table style="text-align: left; height: 110px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">SCHOOL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="school"><br></td>
+								name="school" value="<%=rschools[3].getSchool() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">STATE<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="state"><br></td>
+								name="state" value="<%=rschools[3].getState() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">CONTROL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="control"><br></td>
+								name="control" value="<%=rschools[3].getControl() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">NUMBER OF
 								STUDENTS<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfStudents"><br></td>
+								name="numOfStudents" value="<%=rschools[3].getNumStudents() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FEMALE<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">QUALITY OF LIFE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="female"><br></td>
+								name="numOfStudents" value="<%=rschools[3].getQualOfLife() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT VERBAL<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">ACADEMIC SCALE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="satVerbal"><br></td>
+								name="numOfStudents" value="<%=rschools[3].getAcademicScale() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT MATH<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="satMath"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EXPENSES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="expenses"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FINANCIAL
-								AID<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="financialAid"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">NUMBER OF
-								APPLICANTS<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfApplicants"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ADMITTED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="admitted"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ENROLLED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="enrolled"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">ACADEMIC
-								SCALE (1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="academicScale"><br></td>
-						</tr>
-						<tr>
+												<tr>
 							<td style="vertical-align: top; width: 247px;">SOCIAL SCALE
-								(1-5)<br>
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="socialScale"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">QUALITY OF
-								LIFE SCALE(1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="qualOfLife"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EMPHASES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="emphases1"><br> <input name="emphases2"><br>
-								<input name="emphases3"><br> <input
-								name="emphases4"><br> <input name="emphases5"><br></td>
+								name="numOfStudents" value="<%=rschools[3].getSocialscale() %>" readonly><br></td>
 						</tr>
 					</tbody>
-				</table>
-				<input name="saveschool4" value="save" type="submit"><br>
+				</table><br>
+				<form action="SaveSchool.jsp" method="post">
+				<input name="saveschool1" value="save" type="submit"><br>
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[3].getSchool())%>">
+				</form>
 				<br>
-				<p id="rec5">Recommendation No. 5</p>
-				<table style="text-align: left; height: 480px; width: 553px;"
+													<p id="rec5">Recommendation No. 5</p>
+				<table style="text-align: left; height: 110px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">SCHOOL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="school"><br></td>
+								name="school" value="<%=rschools[4].getSchool() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">STATE<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="state"><br></td>
+								name="state" value="<%=rschools[4].getState() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">CONTROL<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="control"><br></td>
+								name="control" value="<%=rschools[4].getControl() %>" readonly><br></td>
 						</tr>
 						<tr>
 							<td style="vertical-align: top; width: 247px;">NUMBER OF
 								STUDENTS<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfStudents"><br></td>
+								name="numOfStudents" value="<%=rschools[4].getNumStudents() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FEMALE<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">QUALITY OF LIFE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="female"><br></td>
+								name="numOfStudents" value="<%=rschools[4].getQualOfLife() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT VERBAL<br>
+												<tr>
+							<td style="vertical-align: top; width: 247px;">ACADEMIC SCALE
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="satVerbal"><br></td>
+								name="numOfStudents" value="<%=rschools[4].getAcademicScale() %>" readonly><br></td>
 						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">SAT MATH<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="satMath"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EXPENSES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="expenses"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% FINANCIAL
-								AID<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="financialAid"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">NUMBER OF
-								APPLICANTS<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="numOfApplicants"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ADMITTED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="admitted"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">% ENROLLED<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="enrolled"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">ACADEMIC
-								SCALE (1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="academicScale"><br></td>
-						</tr>
-						<tr>
+												<tr>
 							<td style="vertical-align: top; width: 247px;">SOCIAL SCALE
-								(1-5)<br>
+								<br>
 							</td>
 							<td style="vertical-align: top; width: 288px;"><input
-								name="socialScale"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">QUALITY OF
-								LIFE SCALE(1-5)<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="qualOfLife"><br></td>
-						</tr>
-						<tr>
-							<td style="vertical-align: top; width: 247px;">EMPHASES<br>
-							</td>
-							<td style="vertical-align: top; width: 288px;"><input
-								name="emphases1"><br> <input name="emphases2"><br>
-								<input name="emphases3"><br> <input
-								name="emphases4"><br> <input name="emphases5"><br></td>
+								name="numOfStudents" value="<%=rschools[4].getSocialscale() %>" readonly><br></td>
 						</tr>
 					</tbody>
-				</table>
-				<input name="saveschool5" value="save" type="submit"><br>
-			
+				</table><br>
+				<form action="SaveSchool.jsp" method="post">
+				<input name="saveschool1" value="save" type="submit"><br>
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[4].getSchool())%>">
+				</form>
+				<br>
 		</div>
 	</div>
 </body>

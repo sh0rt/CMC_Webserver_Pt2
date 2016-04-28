@@ -179,4 +179,19 @@ public class StudentHome {
 	public ArrayList<School> getSchoolIDByName(String name) {
 		return database.getIdByName(name);
 	}
+	
+	public School getSchoolByID2(int id){
+		return database.getSchools().get(id);
+	}
+	public String[] getEmphasis(int id){
+		return database.getSchoolEmphasisByID(id);
+	}
+	public School[] getRecommend(School school){
+		return search.getRecommend(school);
+	}
+	
+	public int getSchoolIDByName2(String name){
+		return database.getSchoolIDByName(name);
+		
+	}
 }
