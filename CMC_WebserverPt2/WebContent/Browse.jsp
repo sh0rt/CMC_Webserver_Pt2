@@ -8,6 +8,7 @@
 </head>
 	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+
 <%TopSchools top = new TopSchools();
 ArrayList<String> largest = top.getPageInfo('a');
 ArrayList<String> smallest = top.getPageInfo('b');
