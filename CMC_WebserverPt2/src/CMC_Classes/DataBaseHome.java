@@ -220,13 +220,21 @@ public class DataBaseHome{
 		String[][] name = dummydatabase.user_getUsernamesWithSavedSchools();
 		ArrayList<School> returnList = new ArrayList<School>();
 		for(int i = 0; i < name.length; i++) {
-			if(name[i][0] == userId) {
-				returnList = this.getIdByName(name[i][i]);
+			if(name[i][0].equals(userId)) {
+				returnList.add(this.getSchoolByName(name[i][1]));
 			}
 		}
 		return returnList;
 	}
 
+	public School getSchoolByName(String name) {
+		ArrayList<School> al = this.getSchools();
+		for(int i=0; i<al.size(); i++) {
+			if(al.get(i).getSchool().equals(name))
+				return al.get(i);
+		}
+		return null;
+	}
 
 	public ArrayList<School> getIdByName(String name) {
 		ArrayList<School> schools = this.getSchools();

@@ -9,10 +9,6 @@
 </head>
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
-	<%
-		if (session.getAttribute("user") == null || ((User) session.getAttribute("user")).getType() != 'u')
-			response.sendRedirect("login.jsp?Error=5");
-	%>
 	<a href="UserHome.jsp" id="goback">Go back</a>
 	<a href="logout.jsp" id="logout">Log Out</a>
 	<div id="ManSavSchItems">
@@ -25,7 +21,13 @@
 				<%
 					int i = 0;
 					User user = (User) session.getAttribute("user");
-					String name = user.getFirstName();
+					String name = "";
+					try {
+					name = user.getUsername();
+					}
+					catch(NullPointerException npe) {
+						response.sendRedirect("login.jsp?Error=5");
+					}
 					ArrayList<School> stuSavedSchools = new ArrayList<School>();
 					String error = "User has no saved schools";
 					try {
@@ -47,17 +49,13 @@
 					for (int j = 0; j < i; j++) {
 				%>
 				<tr>
-					<td><input type="submit" value="Remove" id="removeButton"></td>
+					<td><form action="remove.jsp" method="post"><input type="submit" value="Remove" id="removeButton"></form></td>
 					<td>
-						<%
-							try {
-									out.print(stuSavedSchools.get(i).getName());
-								} catch (IndexOutOfBoundsException iobe) {
-						%><%=error%> <%
-							}
-						%>
+						<%out.print(stuSavedSchools.get(j).getName());%>
 					</td>
-					<td><input type="submit" value="View" id="viewButton"></td>
+					<td><form action="viewSchool.jsp" method="post"><input type="submit" value="View" id="viewButton">
+					<input type="hidden" name="schoolId"
+					 value="<%=((StudentHome)session.getAttribute("studenthome")).getSchoolIDByName(stuSavedSchools.get(j).getName())%>"></form></td>
 				</tr>
 				<%
 					}
