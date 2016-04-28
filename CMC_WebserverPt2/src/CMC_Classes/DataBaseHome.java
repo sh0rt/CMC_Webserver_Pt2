@@ -220,7 +220,9 @@ public class DataBaseHome{
 
 	public ArrayList<School> getSavedSchools(String userId, String[][] name) {
 		ArrayList<School> returnList = new ArrayList<School>();
+		System.out.println(name.length);
 		for(int i = 0; i < name.length; i++) {
+			System.out.println("does "+name[i][0] +" match " + userId);
 			if(name[i][0].equals(userId)) {
 				returnList.add(this.getSchoolByName(name[i][1]));
 			}
@@ -286,6 +288,6 @@ public class DataBaseHome{
     }
     
     public String[][] getSavedSchoolss(){
-    	return dummydatabase.university_getNamesWithEmphases();
+    	return dummydatabase.user_getUsernamesWithSavedSchools();
     }
 }
