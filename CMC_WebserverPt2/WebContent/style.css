@@ -301,3 +301,12 @@ div#browse{
 	border-radius: 25px;
 	
 }
+
+div#BrowseItems {
+	background-color: #D1D36A;
+	width: 800px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
