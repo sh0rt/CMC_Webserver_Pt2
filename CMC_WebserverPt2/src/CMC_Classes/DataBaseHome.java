@@ -218,12 +218,18 @@ public User addUser(String firstname, String lastname, String username, String p
     }
     
     public void addFullEmphasis(String school, String[] emphasis){
+    	this.removeAllEmphasis(school);
     	for(int i=0; i<emphasis.length/2; i++){
-    		if(dummydatabase.university_removeUniversityEmphasis(school, emphasis[i+5]) == -1){
-    			throw new IllegalArgumentException("emphasis '"+emphasis[i]+"' count not be removed from school: "+ school+".");
-    		}
         	if(dummydatabase.university_addUniversityEmphasis(school, emphasis[i]) == -1)
         		throw new IllegalArgumentException("emphasis '"+emphasis[i]+"' count not be added to school: "+ school+".");
+    	}
+    }
+    
+    public void removeAllEmphasis(String school){
+    	String[][] string = dummydatabase.university_getNamesWithEmphases();
+    	for(int i=0; i<string.length;i++){
+    		if(string[i][0].equals(school))
+    			dummydatabase.university_removeUniversityEmphasis(school, string[i][1]);
     	}
     }
 }

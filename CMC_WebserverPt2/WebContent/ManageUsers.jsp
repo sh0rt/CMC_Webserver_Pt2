@@ -16,67 +16,72 @@
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
 	<div id="ManUseItems">
-		<a href="logout.jsp" id="logout">Log Out</a> <a href="adminhome.jsp"
-			id="goback">Go back</a>
-		<center>
-			<h1>Manage Users</h1>
-			<table border="3">
-				<tbody>
-					<tr>
-						<th colspan="17"><center>
-								<h1>Users Currently in the CMC System</h1>
-							</center></th>
-					</tr>
-					<tr>
-						<th colspan="17"><a href="AddUser.jsp">Add New User</a></th>
-					</tr>
+		<div id="pagewrap">
+			<div id="sidebarMU">
+				<a href="#ManUseItems">Return to top</a>
+			</div>
+			<a href="logout.jsp" id="logout">Log Out</a> <a href="adminhome.jsp"
+				id="goback">Go back</a>
+			<center>
+				<h1>Manage Users</h1>
+				<table border="3">
+					<tbody>
+						<tr>
+							<th colspan="17"><center>
+									<h1>Users Currently in the CMC System</h1>
+								</center></th>
+						</tr>
+						<tr>
+							<th colspan="17"><a href="AddUser.jsp">Add New User</a></th>
+						</tr>
 
-					<tr>
-						<th></th>
-						<th></th>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Username</th>
-						<th>Password</th>
-						<th>Type</th>
-						<th>Status</th>
-						<th></th>
-					</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Username</th>
+							<th>Password</th>
+							<th>Type</th>
+							<th>Status</th>
+							<th></th>
+						</tr>
 
-					<%
-						ArrayList<User> users = ((AdminHome) session.getAttribute("adminhome")).getUsers();
-							for (int i = 0; i < users.size(); i++) {
-					%>
-					<tr>
-						<td>
-							<form action="DeactivateUser.jsp" method="post">
-								<input type="hidden" name="duser" value=<%=i%>> <input
-									type="submit" value="Deactivate">
-							</form>
-						</td>
-						<td width="20px"></td>
-						<td><%=users.get(i).getFirstName()%></td>
-						<td><%=users.get(i).getLastName()%></td>
-						<td><%=users.get(i).getUsername()%></td>
-						<td><%=users.get(i).getPassword()%></td>
-						<td><%=users.get(i).getType()%></td>
-						<td><%=users.get(i).getStatus()%></td>
-						<td>
-							<form action="EditUser.jsp" method="post">
-								<input type="hidden" name="euser" value=<%=i%>> <input
-									type="submit" value="Edit">
-							</form>
-						</td>
-					</tr>
-					<%
-						}
-						}
-					%>
+						<%
+							ArrayList<User> users = ((AdminHome) session.getAttribute("adminhome")).getUsers();
+								for (int i = 0; i < users.size(); i++) {
+						%>
+						<tr>
+							<td>
+								<form action="DeactivateUser.jsp" method="post">
+									<input type="hidden" name="duser" value=<%=i%>> <input
+										type="submit" value="Deactivate">
+								</form>
+							</td>
+							<td width="20px"></td>
+							<td><%=users.get(i).getFirstName()%></td>
+							<td><%=users.get(i).getLastName()%></td>
+							<td><%=users.get(i).getUsername()%></td>
+							<td><%=users.get(i).getPassword()%></td>
+							<td><%=users.get(i).getType()%></td>
+							<td><%=users.get(i).getStatus()%></td>
+							<td>
+								<form action="EditUser.jsp" method="post">
+									<input type="hidden" name="euser" value=<%=i%>> <input
+										type="submit" value="Edit">
+								</form>
+							</td>
+						</tr>
+						<%
+							}
+							}
+						%>
 
 
-				</tbody>
-			</table>
-		</center>
+					</tbody>
+				</table>
+			</center>
+		</div>
 	</div>
 </body>
 </html>
