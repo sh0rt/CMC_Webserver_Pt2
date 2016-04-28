@@ -8,6 +8,11 @@
 </head>
 	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+<div id="edituser">
+	<%
+		if (session.getAttribute("user") == null || ((User) session.getAttribute("user")).getType() != 'a')
+			response.sendRedirect("login.jsp?Error=5");
+	%>
 <a href="logout.jsp" id="logout">Log Out</a>
 <a href="ManageUsers.jsp" id="goback">Go back</a>
 <%if(request.getParameter("Error") != null){
@@ -50,5 +55,6 @@
 <input type="Reset" value="Reset">
 </form>
 </center>
+</div>
 </body>
 </html>

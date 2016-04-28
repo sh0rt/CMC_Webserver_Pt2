@@ -9,6 +9,10 @@
 <link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
 	<%
+		if (session.getAttribute("user") == null || ((User) session.getAttribute("user")).getType() != 'u')
+			response.sendRedirect("login.jsp?Error=5");
+	%>
+	<%
 		User user = (User) session.getAttribute("user");
 	%>
 	<div id="UserHomeItems">

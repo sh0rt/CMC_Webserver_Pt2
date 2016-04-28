@@ -8,6 +8,11 @@
 </head>
 	<link rel="stylesheet" href="style.css" type="text/css"></link>
 <body>
+<div id="addnewschitems">
+	<%
+		if (session.getAttribute("user") == null || ((User) session.getAttribute("user")).getType() != 'a')
+			response.sendRedirect("login.jsp?Error=5");
+	%>
 <%if(request.getParameter("Error") != null){
 	if(request.getParameter("Error").equals("1"))
 		out.print("<font color=\"red\">Error: Please enter in proper values</font>");
@@ -144,9 +149,11 @@ name="emphasis4"><br><input name="emphasis5"><br>
 </tr>
 </tbody>
 </table>
+<br>
 <input name="addschool" value="ADD SCHOOL" type="submit"> &nbsp;<input
 name="cancelchanges" value="CANCEL CHANGES" type="reset"> <br>
 </form> 
 </center>
+</div>
 </body>
 </html>

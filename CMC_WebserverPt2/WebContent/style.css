@@ -253,3 +253,21 @@ div#sidebarMU {
 	position: fixed;
 	margin-left: -175px;
 }
+
+div#addnewschitems{
+    background-color: #D1D36A;
+	width: 600px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
+
+div#edituser{
+    background-color: #D1D36A;
+	width: 500px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+}
