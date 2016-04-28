@@ -50,11 +50,13 @@ public class DataBaseHome{
 	public ArrayList<User> getUsers(){
 		String[][] temp = dummydatabase.user_getUsers();
 		ArrayList<User> users = new ArrayList<User>();
-
+		String[][] name = dummydatabase.user_getUsernamesWithSavedSchools();
+		ArrayList<School> saved = null;
 		for(int i=0; i<temp.length;i++){
 			User user = new User(temp[i][0],temp[i][1],temp[i][2],temp[i][3],temp[i][4].charAt(0),temp[i][5].charAt(0));
-			for(int j=0; j< this.getSavedSchools(user.getUsername()).size(); j++){
-				user.addSchool(this.getSavedSchools(user.getUsername()).get(j));
+			saved = this.getSavedSchools(user.getUsername(), name);
+			for(int j=0; j< saved.size(); j++){
+				user.addSchool(saved.get(j));
 			}
 			users.add(user);
 		}
@@ -216,8 +218,7 @@ public class DataBaseHome{
 		return retemp;
 	}
 
-	public ArrayList<School> getSavedSchools(String userId) {
-		String[][] name = dummydatabase.user_getUsernamesWithSavedSchools();
+	public ArrayList<School> getSavedSchools(String userId, String[][] name) {
 		ArrayList<School> returnList = new ArrayList<School>();
 		for(int i = 0; i < name.length; i++) {
 			if(name[i][0].equals(userId)) {
@@ -282,5 +283,9 @@ public class DataBaseHome{
     			return i;
     	}
     	return -1;
+    }
+    
+    public String[][] getSavedSchoolss(){
+    	return dummydatabase.university_getNamesWithEmphases();
     }
 }

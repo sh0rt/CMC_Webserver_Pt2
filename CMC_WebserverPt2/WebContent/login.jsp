@@ -39,7 +39,7 @@
 		</form>
 		<center>
 			<p>Admin login Username: user Password: pass</p>
-			<p>Student login Username: juser Password: user
+			<p>Student login Username: luser Password: user
 		</center>
 		<p id="registerPrompt">
 			Not in our System? <a href="Register.jsp">Register here!</a>

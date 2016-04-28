@@ -173,7 +173,7 @@ public class StudentHome {
 	}
 	
 	public ArrayList<School> getSavedSchools(String name) {
-		return database.getSavedSchools(name);
+		return database.getSavedSchools(name, database.getSavedSchoolss());
 	}
 	
 	public ArrayList<School> getSchoolIDByName(String name) {

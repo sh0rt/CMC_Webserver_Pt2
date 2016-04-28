@@ -265,7 +265,7 @@ School[] rschools = student.getRecommend(school1);
 				</table><br>
 				<form action="SaveSchool.jsp" method="post">
 				<input name="saveschool1" value="save" type="submit"><br>
-				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[1].getSchool())%>">
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[1].getSchool())+1%>">
 				</form>
 				<br>
 									<p id="rec3">Recommendation No. 3</p>
@@ -379,7 +379,7 @@ School[] rschools = student.getRecommend(school1);
 				</table><br>
 				<form action="SaveSchool.jsp" method="post">
 				<input name="saveschool1" value="save" type="submit"><br>
-				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[3].getSchool())%>">
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[3].getSchool())+1%>">
 				</form>
 				<br>
 													<p id="rec5">Recommendation No. 5</p>
@@ -436,7 +436,7 @@ School[] rschools = student.getRecommend(school1);
 				</table><br>
 				<form action="SaveSchool.jsp" method="post">
 				<input name="saveschool1" value="save" type="submit"><br>
-				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[4].getSchool())%>">
+				<input type="hidden" name="schoolID" value="<%=student.getSchoolIDByName2(rschools[4].getSchool())+1%>">
 				</form>
 				<br>
 		</div>

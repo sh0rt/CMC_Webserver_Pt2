@@ -37,7 +37,7 @@
 							<form action="SaveSchool.jsp" method="post">
 								<input type="submit" name="Save" value="Save"> <input
 									type="hidden" name="schoolID"
-									value="<%=session.getAttribute("id1").toString()%>">
+									value="<%=Integer.parseInt(session.getAttribute("id1").toString())+1%>">
 							</form>
 						</td>
 						<td width="400px">
@@ -56,7 +56,7 @@
 							<form action="SaveSchool.jsp" method="post">
 								<input type="submit" name="Save" value="Save"> <input
 									type="hidden" name="schoolID"
-									value="<%=session.getAttribute("id2").toString()%>">
+									value="<%=Integer.parseInt(session.getAttribute("id2").toString())+1%>">
 							</form>
 						</td>
 						<td width="400px">
@@ -75,7 +75,7 @@
 							<form action="SaveSchool.jsp" method="post">
 								<input type="submit" name="Save" value="Save"> <input
 									type="hidden" name="schoolID"
-									value="<%=session.getAttribute("id3").toString()%>">
+									value="<%=Integer.parseInt(session.getAttribute("id3").toString())+1%>">
 							</form>
 						</td>
 						<td width="400px">
@@ -94,7 +94,7 @@
 							<form action="SaveSchool.jsp" method="post">
 								<input type="submit" name="Save" value="Save"> <input
 									type="hidden" name="schoolID"
-									value="<%=session.getAttribute("id4").toString()%>">
+									value="<%=Integer.parseInt(session.getAttribute("id4").toString())+1%>">
 							</form>
 						</td>
 						<td width="400px">
@@ -113,7 +113,7 @@
 							<form action="SaveSchool.jsp" method="post">
 								<input type="submit" name="Save" value="Save"> <input
 									type="hidden" name="schoolID"
-									value="<%=session.getAttribute("id5").toString()%>">
+									value="<%=Integer.parseInt(session.getAttribute("id5").toString())+1%>">
 							</form>
 						</td>
 						<td width="400px">

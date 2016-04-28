@@ -131,10 +131,10 @@ public class SearchHome {
 		int[] tallys = new int[schools.size()];
 		
 		String[] s = new String[4]; // strings
-		s[0] = name;
-		s[1] = state;
-		s[2] = location;
-		s[3] = control;
+		s[0] = name.toUpperCase();
+		s[1] = state.toUpperCase();
+		s[2] = location.toUpperCase();
+		s[3] = control.toUpperCase();
 
 		int[][] i = new int[5][2]; // integers
 		i[0] = numStudents;
@@ -155,25 +155,25 @@ public class SearchHome {
 		for (int t = 0; t < schools.size(); t++) {
 			try {
 				if (schools.get(t).getName().contains(s[0])) {
-					tallys[t] += 1;
+					tallys[t] += 10;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
 				if (schools.get(t).getState().contains(s[1])) {
-					tallys[t] += 1;
+					tallys[t] += 3;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
 				if (schools.get(t).getLocation().contains(s[2])) {
-					tallys[t] += 1;
+					tallys[t] += 3;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
 				if (schools.get(t).getControl().contains(s[3])) {
-					tallys[t] +=1;
+					tallys[t] +=3;
 				}
 			} catch (NullPointerException ex) {
 			}
@@ -185,68 +185,68 @@ public class SearchHome {
 			} catch (NullPointerException ex) {
 			}
 			try {
-				if (i[1][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < i[1][1]) {
+				if (i[1][0] < schools.get(t).getNumApplicants() && schools.get(t).getNumApplicants() < i[1][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
-				if (i[2][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < i[2][1]) {
+				if (i[2][0] < schools.get(t).getAcademicScale() && schools.get(t).getAcademicScale() < i[2][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
-				if (i[3][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < i[3][1]) {
+				if (i[3][0] < schools.get(t).getSocialscale() && schools.get(t).getSocialscale() < i[3][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
-				if (i[4][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < i[4][1]) {
+				if (i[4][0] < schools.get(t).getQualOfLife() && schools.get(t).getQualOfLife() < i[4][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
 			}
 
 			try {
-				if (d[0][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < d[0][1]) {
+				if (d[0][0] < schools.get(t).getSatVerbal() && schools.get(t).getSatVerbal() < d[0][1]) {
+					tallys[t] += 2;
+				}
+			} catch (NullPointerException ex) {
+			}
+			try {
+				if (d[1][0] < schools.get(t).getSatMath() && schools.get(t).getSatMath() < d[1][1]) {
+					tallys[t] += 2;
+				}
+			} catch (NullPointerException ex) {
+			}
+			try {
+				if (d[2][0] < schools.get(t).getPercentFemale() && schools.get(t).getPercentFemale() < d[2][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
-				if (d[1][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < d[1][1]) {
+				if (d[3][0] < schools.get(t).getExpenses() && schools.get(t).getExpenses() < d[3][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
-				if (d[2][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < d[2][1]) {
+				if (d[4][0] < schools.get(t).getPercentFinAid() && schools.get(t).getPercentFinAid() < d[4][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
-				if (d[3][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < d[3][1]) {
+				if (d[5][0] < schools.get(t).getPercentAdmitted() && schools.get(t).getPercentAdmitted() < d[5][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
 			}
 			try {
-				if (d[4][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < d[4][1]) {
-					tallys[t] += 1;
-				}
-			} catch (NullPointerException ex) {
-			}
-			try {
-				if (d[5][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < d[5][1]) {
-					tallys[t] += 1;
-				}
-			} catch (NullPointerException ex) {
-			}
-			try {
-				if (d[6][0] < schools.get(t).getNumStudents() && schools.get(t).getNumStudents() < d[6][1]) {
+				if (d[6][0] < schools.get(t).getPercentEnrolled() && schools.get(t).getPercentEnrolled() < d[6][1]) {
 					tallys[t] += 1;
 				}
 			} catch (NullPointerException ex) {
