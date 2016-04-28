@@ -11,8 +11,7 @@
 	<div id="BrowseItems">
 		<div id="pagewrap">
 			<div id="sidebar">
-				<a href="searchResults.jsp">Back to results</a><br> <a
-					href="UserHome.jsp">Main menu</a>
+				<a href="UserHome.jsp">Main menu</a>
 				<hr>
 				<a href="#Cat1">Category #1</a><br> 
 				<a href="#Cat2">Category #2</a><br> 
