@@ -36,7 +36,7 @@ School school1 = student.getSchoolByID(Integer.parseInt(request.getParameter("sc
 					
 				%>
 			<span style="font-weight: bold;">VIEW SCHOOL</span> <br> <br>
-			<form method="post" action="SearchSchoolsAction.jsp">
+			<form method="post" action="SaveSchool.jsp">
 				<table style="text-align: left; height: 480px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
@@ -146,9 +146,13 @@ School school1 = student.getSchoolByID(Integer.parseInt(request.getParameter("sc
 						</tr>
 					</tbody>
 				</table>
+				<input name="saveschool2" value="save" type="submit"><br>
+				</form>
+				
 				<br> <br> <br> <span style="font-weight: bold;">MAY
 					WE ALSO RECOMMEND....</span><br> <br>
 					<p id="rec1">Recommendation No. 1</p>
+				<form action=
 				<table style="text-align: left; height: 480px; width: 553px;"
 					border="1" cellpadding="2" cellspacing="2">
 					<tbody>
@@ -707,7 +711,7 @@ School school1 = student.getSchoolByID(Integer.parseInt(request.getParameter("sc
 					</tbody>
 				</table>
 				<input name="saveschool5" value="save" type="submit"><br>
-			</form>
+			
 		</div>
 	</div>
 </body>
