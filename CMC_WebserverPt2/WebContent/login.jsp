@@ -23,11 +23,11 @@
 			<h2 style="text-align: center;">
 				Welcome to CMC<br>
 			</h2>
-			<div style="text-align: center;">
-				Username: <input name="username"><br>
+			<div style="text-align: center;" id="loginUsername">
+				<input name="username" placeholder="Username" class="loginInput"><br>
 			</div>
 			<div style="text-align: center;">
-				Password:&nbsp; <input name="password" type="password"><br>
+				<input name="password" type="password" placeholder="Password" class="loginInput"><br>
 			</div>
 			<br>
 			<div style="text-align: center;">
