@@ -22,7 +22,6 @@
 				<a href="#Cat6">Category #6</a><br>
 				<a href="#BrowseItems">Return to top</a>
 			</div>
-			<a href="UserHome.jsp" id="goback">Go Back</a>
 			<%
 				TopSchools top = new TopSchools();
 				ArrayList<String> largest = top.getPageInfo('a');
