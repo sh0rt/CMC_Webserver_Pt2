@@ -259,4 +259,8 @@ public class AdminHome {
 public String[] getEmphasis(int id){
 	return database.getSchoolEmphasisByID(id);
 }
+
+public void setEmphasis(String school, String[] emphasis){
+	database.addFullEmphasis(school, emphasis);
+}
 }

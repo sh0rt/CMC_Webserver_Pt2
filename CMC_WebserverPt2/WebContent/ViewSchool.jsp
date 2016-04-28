@@ -105,6 +105,11 @@ if(request.getParameter("Error") != null){
 <input type="text" name= "emphasis3" value="<%=emphasis[2]%>"><br>
 <input type="text" name= "emphasis4" value="<%=emphasis[3]%>"><br>
 <input type="text" name= "emphasis5" value="<%=emphasis[4]%>"><br>
+<input type="hidden" name= "emphasis1h" value="<%=emphasis[0]%>"><br>
+<input type="hidden" name= "emphasis2h" value="<%=emphasis[1]%>"><br>
+<input type="hidden" name= "emphasis3h" value="<%=emphasis[2]%>"><br>
+<input type="hidden" name= "emphasis4h" value="<%=emphasis[3]%>"><br>
+<input type="hidden" name= "emphasis5h" value="<%=emphasis[4]%>"><br>
 </td>
 </tr>
 </tbody>

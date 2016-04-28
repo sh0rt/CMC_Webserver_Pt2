@@ -7,13 +7,20 @@
 <title>Edit School</title>
 </head>
 <body>
-<%String[] string = new String[5];
+<%String[] string = new String[10];
 string[0] = request.getParameter("emphasis1");
 string[1] = request.getParameter("emphasis2");
-string[2] = request.getParameter("emphasis2");
-string[3] = request.getParameter("emphasis3");
-string[4] = request.getParameter("emphasis4");
+string[2] = request.getParameter("emphasis3");
+string[3] = request.getParameter("emphasis4");
+string[4] = request.getParameter("emphasis5");
+string[5] = request.getParameter("emphasis1h");
+string[6] = request.getParameter("emphasis2h");
+string[7] = request.getParameter("emphasis3h");
+string[8] = request.getParameter("emphasis4h");
+string[9] = request.getParameter("emphasis5h");
+
 try{
+((AdminHome)session.getAttribute("adminhome")).setEmphasis(request.getParameter("school"), string);
 ((AdminHome)session.getAttribute("adminhome")).editSchool(
 		request.getParameter("school"),
 		request.getParameter("state"),

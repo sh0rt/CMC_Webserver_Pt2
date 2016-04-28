@@ -148,7 +148,7 @@ public User addUser(String firstname, String lastname, String username, String p
    if(dummydatabase.university_editUniversity(school, state,location, control, numStudents, percentFemale, satVerbal, satMath,
       expenses, percentFinAid, numApplicants, percentAdmitted, percentEnrolled, academicScale, socialScale, qualOflife) == -1)
 	   throw new IllegalArgumentException("university could not be changed in the database");
-  
+  /*
       String[][] temp = dummydatabase.university_getEmphases();
       for(int i=0; i<temp[id].length; i++){
        if(dummydatabase.university_removeUniversityEmphasis(school, temp[id][i]) == -1)
@@ -158,7 +158,7 @@ public User addUser(String firstname, String lastname, String username, String p
        if(dummydatabase.university_addUniversityEmphasis(school, emphasis[i]) == -1)
     	   System.out.println("adding emphasis is complete garbage \n ----------"); 
       }
-      
+      */
       return new School(school,state,location,control,numStudents,satVerbal,satMath,numApplicants,
                         percentFemale,expenses,percentFinAid,percentAdmitted,percentEnrolled,
                         academicScale,socialScale,qualOflife,emphasis);
@@ -210,6 +210,21 @@ public User addUser(String firstname, String lastname, String username, String p
     			i = 1000;
     	}
     	return retemp;
+    }
+    
+    public void addEmphasis(String school, String emphasis){
+    	if(dummydatabase.university_addUniversityEmphasis(school, emphasis) == -1)
+    		throw new IllegalArgumentException("emphasis '"+emphasis+"' count not be added to school: "+ school+".");
+    }
+    
+    public void addFullEmphasis(String school, String[] emphasis){
+    	for(int i=0; i<emphasis.length/2; i++){
+    		if(dummydatabase.university_removeUniversityEmphasis(school, emphasis[i+5]) == -1){
+    			throw new IllegalArgumentException("emphasis '"+emphasis[i]+"' count not be removed from school: "+ school+".");
+    		}
+        	if(dummydatabase.university_addUniversityEmphasis(school, emphasis[i]) == -1)
+        		throw new IllegalArgumentException("emphasis '"+emphasis[i]+"' count not be added to school: "+ school+".");
+    	}
     }
 }
 
