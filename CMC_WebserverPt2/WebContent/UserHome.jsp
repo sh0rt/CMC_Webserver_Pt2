@@ -21,7 +21,7 @@
 			Hello,
 			<%=user.getFirstName()%>! <hr><a href=ManageSavedSchools.jsp> Manage
 				My Saved Schools </a> <br> <a href=searchSchoolMenu.jsp> Search
-				for Schools </a> <br> <a href=ManageProfile.jsp> Manage My
+				for Schools </a> <br><a href="Browse.jsp">Browse Top Charts</a> <a href=ManageProfile.jsp> Manage My
 				Profile </a> <br>
 		<hr>
 		<a href="logout.jsp" id="logoutUH">Log Out</a>

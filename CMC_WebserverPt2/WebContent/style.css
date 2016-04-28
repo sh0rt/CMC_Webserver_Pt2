@@ -291,3 +291,13 @@ div#loginUsername {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+div#browse{
+	background-color: #D1D36A;
+	width: 550px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+	
+}
