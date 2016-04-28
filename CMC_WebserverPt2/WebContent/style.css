@@ -271,3 +271,19 @@ div#edituser{
 	margin-right: auto;
 	border-radius: 25px;
 }
+
+input::-moz-placeholder {
+	color: gray;
+}
+
+input.loginInput {
+	border-style: solid;
+	border-color: gray;
+}
+
+div#loginUsername {
+	height: 27px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
